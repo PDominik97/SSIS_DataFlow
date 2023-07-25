@@ -1,12 +1,11 @@
 # SSIS_Project6
 
-Stworzony proces wykorzystuje dane z ogólnodostępnej bazy danych AdventureWorks2019 (backup bazy danych jest połączeniem bazy danych AdventureWorksLT2019 oraz tabel z bazy danych AdventureWorks2019).
-Cały projekt powinien być umieszczony w lokalizacji: C:\SSIS\Integration_Services_Project1\
+The created process uses data from the public AdventureWorks2019 database (the database backup is a combination of the AdventureWorksLT2019 database and tables from the AdventureWorks2019 database). The entire project should be located in: C:\SSIS\Integration_Services_Project1\
 
-Rozwiązanie polega na wyeksportowaniu określonych danych z tabeli a następnie załadowanie ich do innej tabeli. Zostały również dodane dwa dodatkowe zadanie – zrobienie backupu wyeksportowanych plików oraz dodanie do dedykowanej tabeli „SSIS_execute” wpisu o dacie uruchomienia procesu.
+The solution is to export specific data from the table and then load it into another table. Two additional tasks have also been added - making a backup of exported files and adding an entry to the dedicated table "SSIS_execute" with the date of starting the process.
 
-Eksportowane dane są określone kwerendami – wybrane zostały poszczególne kolumny z tabeli [Person].[Address] dla 3 miast. Dane są eksportowane do plików tekstowych nazwanych odpowiednio nazwami miast.
+The exported data is determined by queries - individual columns from the [Person].[Address] table were selected for 3 cities. The data is exported to text files named appropriately with the names of the cities.
 
-Po wyeksportowaniu danych do tabeli „SSIS_execute” przekazywana jest data uruchomienia procesu oraz wykonanie kopii wyeksportowanych plików oraz przeniesienie ich automatycznie do dedykowanego folderu „backup_files” (lokalizacja folderu: C:\SSIS\Integration_Services_Project1\backup_files). Proces ten odbywa się za pomocą skryptu napisanego w języku Python oraz jest on zawarty w pliku „Copy_file.py”
+After exporting the data to the "SSIS_execute" table, the date of starting the process and making copies of the exported files are transferred and automatically transferred to the dedicated "backup_files" folder (folder location: C:\SSIS\Integration_Services_Project1\backup_files). This process is done using a script written in Python and is contained in the file "Copy_file.py"
 
-Następnie wyeksportowane do trzech plików dane są ładowane do tabeli „My_PersonAdress”.
+Then, the data exported to three files is loaded into the "My_PersonAdress" table.
