@@ -1,4 +1,4 @@
-# SSIS_Project6
+# SSIS_DataFlow
 
 The created process uses data from the public AdventureWorks2019 database (the database backup is a combination of the AdventureWorksLT2019 database and tables from the AdventureWorks2019 database). The entire project should be located in: C:\SSIS\Integration_Services_Project1\
 
