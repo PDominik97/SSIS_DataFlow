@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="97"
-  DTS:VersionGUID="{88F95F50-1B76-4AC9-8C40-AF5817F974DB}">
+  DTS:VersionBuild="98"
+  DTS:VersionGUID="{E036E74E-E866-465B-B53A-2D0CDE091A90}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -364,8 +364,9 @@
     <DTS:PackageParameter
       DTS:CreationName=""
       DTS:DataType="8"
+      DTS:Description="Do not change!"
       DTS:DTSID="{7E247766-9ECC-4908-894C-D39B94EF172B}"
-      DTS:ObjectName="BackupInputFiles_Arguments">
+      DTS:ObjectName="copy_file_script_path">
       <DTS:Property
         DTS:DataType="8"
         DTS:Name="ParameterValue">\Copy_file.py</DTS:Property>
@@ -373,6 +374,7 @@
     <DTS:PackageParameter
       DTS:CreationName=""
       DTS:DataType="8"
+      DTS:Description="Do not change! WorkingDirectory_path + Input_Kenmore parameter"
       DTS:DTSID="{E69BD53D-B3A6-4AD4-BEE0-AFA09AB90DF8}"
       DTS:ObjectName="FlatFileConnectionManagerKenmore_ConnectionString">
       <DTS:Property
@@ -382,6 +384,7 @@
     <DTS:PackageParameter
       DTS:CreationName=""
       DTS:DataType="8"
+      DTS:Description="Do not change! WorkingDirectory_path + Input_Renton parameter"
       DTS:DTSID="{DBCD4CC2-F2C7-4330-94C8-BEFA1D3825D3}"
       DTS:ObjectName="FlatFileConnectionManagerRenton_ConnectionString">
       <DTS:Property
@@ -391,6 +394,7 @@
     <DTS:PackageParameter
       DTS:CreationName=""
       DTS:DataType="8"
+      DTS:Description="Do not change! WorkingDirectory_path + Input_Seattle parameter"
       DTS:DTSID="{75A903FC-A16E-4160-B5C1-662D3EE32906}"
       DTS:ObjectName="FlatFileConnectionManagerSeattle_ConnectionString">
       <DTS:Property
@@ -400,6 +404,7 @@
     <DTS:PackageParameter
       DTS:CreationName=""
       DTS:DataType="8"
+      DTS:Description="Do not change!"
       DTS:DTSID="{BCEC982E-67D4-4DC5-935D-D0D95F1B3F10}"
       DTS:ObjectName="ForEachContainer">
       <DTS:Property
@@ -409,6 +414,7 @@
     <DTS:PackageParameter
       DTS:CreationName=""
       DTS:DataType="8"
+      DTS:Description="Do not change!"
       DTS:DTSID="{4A5C34F2-9818-4172-B936-3AD2F5FBBF32}"
       DTS:ObjectName="ForEachContainer2">
       <DTS:Property
@@ -418,6 +424,7 @@
     <DTS:PackageParameter
       DTS:CreationName=""
       DTS:DataType="8"
+      DTS:Description="Do not change!"
       DTS:DTSID="{AA8721B5-39F2-4C3E-9745-5B5371D35CEC}"
       DTS:ObjectName="Input_Kenmore">
       <DTS:Property
@@ -427,6 +434,7 @@
     <DTS:PackageParameter
       DTS:CreationName=""
       DTS:DataType="8"
+      DTS:Description="Do not change!"
       DTS:DTSID="{0D64F443-0CF7-4232-A34D-342A439AC42F}"
       DTS:ObjectName="Input_Renton">
       <DTS:Property
@@ -436,6 +444,7 @@
     <DTS:PackageParameter
       DTS:CreationName=""
       DTS:DataType="8"
+      DTS:Description="Do not change!"
       DTS:DTSID="{FA930613-2846-4D2D-A5D9-C67B7F1C081E}"
       DTS:ObjectName="Input_Seattle">
       <DTS:Property
@@ -445,6 +454,7 @@
     <DTS:PackageParameter
       DTS:CreationName=""
       DTS:DataType="8"
+      DTS:Description="python.exe localization"
       DTS:DTSID="{7F39521E-F63F-4929-A5B2-DE8C077FCB1F}"
       DTS:ObjectName="python_path">
       <DTS:Property
@@ -454,6 +464,7 @@
     <DTS:PackageParameter
       DTS:CreationName=""
       DTS:DataType="8"
+      DTS:Description="Your local directory path"
       DTS:DTSID="{818EC195-2233-41CE-A544-BBE0C4AB7E5E}"
       DTS:ObjectName="WorkingDirectory_path">
       <DTS:Property

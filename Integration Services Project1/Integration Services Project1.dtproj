@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-BHU8VRP</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnjthYQuUQEOlQVSIXoF5NAAAAAACAAAAAAAQZgAAAAEAACAAAABy9BGtPYYRrHhUaM7mKuYwJ/iyOhzJhTppcaUinyDu1wAAAAAOgAAAAAIAACAAAAAqLa/HCon2Hcov788/UIU6NdcRV6yZwQmHM7WJJ0IYspAAAADiw8HhQVj23HjWlZbsqE03QXPGiHTHbiYEMBXEh9/7xNh8fm6Al3kJC0+Y8Nbeb44ZB/LbpADox7Xf4o9FQImn3+przuO2a1powjsP5NHSlggfAGEk57m0cmW9i6iB8ERRu339laCcIWjqfJ2leHLh6mzhGmMlvb46fgE/JAC5Kz2QklGRwyP1Vfw3+2qL2C5AAAAArhXMbbOvYwcYMdeRyJWRfKYXAbxwRrd3vWAvoRY9Ib61tJM/MWSF2GyUwF2j1y2J87+YOso3AmrUeDzlsCnagQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnjthYQuUQEOlQVSIXoF5NAAAAAACAAAAAAAQZgAAAAEAACAAAACQ95Ar1FuG+lH7Rbx4OROfV6q/MI4lsNSHsKXIOBxx7AAAAAAOgAAAAAIAACAAAAB968mPZmRdBte3UePZ9UZEs+wPQWiU7hD1r8Ya/x0jQ5AAAAATwdWtdvt/eda+RgStip1Y297v+PDKmlL4oWZ89gLxfTO9CO0jrLOxhuhLbmGcLnf5/XBPhScCoX2+s8ZDhm+oBVXGItjDhXLHY2qvZgYXkCkq85c2CPgoeaUloOCGQ+6kSFN/T4eHrEU1hplzV8Lo2hSYSLptOheVWiYqgmUXi2rKEXKRr/MOH6del5Po7U9AAAAAsDdefTt1h8jWPLM6P/3GIROSnZnNZ5XEr9Rie5dx7t+w6t6Q5a2MxWO6gYhOosXHM0qSCMW8SudaHg5ZBiYuZQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,23 +42,22 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">97</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">98</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{88F95F50-1B76-4AC9-8C40-AF5817F974DB}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{E036E74E-E866-465B-B53A-2D0CDE091A90}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
               </SSIS:Properties>
               <SSIS:Parameters>
-                <SSIS:Parameter SSIS:Name="BackupInputFiles_Arguments">
+                <SSIS:Parameter SSIS:Name="copy_file_script_path">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">{7E247766-9ECC-4908-894C-D39B94EF172B}</SSIS:Property>
                     <SSIS:Property SSIS:Name="CreationName">
                     </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">Do not change!</SSIS:Property>
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
@@ -71,8 +70,7 @@
                     <SSIS:Property SSIS:Name="ID">{E69BD53D-B3A6-4AD4-BEE0-AFA09AB90DF8}</SSIS:Property>
                     <SSIS:Property SSIS:Name="CreationName">
                     </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">Do not change! WorkingDirectory_path + Input_Kenmore parameter</SSIS:Property>
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
@@ -85,8 +83,7 @@
                     <SSIS:Property SSIS:Name="ID">{DBCD4CC2-F2C7-4330-94C8-BEFA1D3825D3}</SSIS:Property>
                     <SSIS:Property SSIS:Name="CreationName">
                     </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">Do not change! WorkingDirectory_path + Input_Renton parameter</SSIS:Property>
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
@@ -99,8 +96,7 @@
                     <SSIS:Property SSIS:Name="ID">{75A903FC-A16E-4160-B5C1-662D3EE32906}</SSIS:Property>
                     <SSIS:Property SSIS:Name="CreationName">
                     </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">Do not change! WorkingDirectory_path + Input_Seattle parameter</SSIS:Property>
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
@@ -113,8 +109,7 @@
                     <SSIS:Property SSIS:Name="ID">{BCEC982E-67D4-4DC5-935D-D0D95F1B3F10}</SSIS:Property>
                     <SSIS:Property SSIS:Name="CreationName">
                     </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">Do not change!</SSIS:Property>
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
@@ -127,8 +122,7 @@
                     <SSIS:Property SSIS:Name="ID">{4A5C34F2-9818-4172-B936-3AD2F5FBBF32}</SSIS:Property>
                     <SSIS:Property SSIS:Name="CreationName">
                     </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">Do not change!</SSIS:Property>
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
@@ -141,8 +135,7 @@
                     <SSIS:Property SSIS:Name="ID">{AA8721B5-39F2-4C3E-9745-5B5371D35CEC}</SSIS:Property>
                     <SSIS:Property SSIS:Name="CreationName">
                     </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">Do not change!</SSIS:Property>
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
@@ -155,8 +148,7 @@
                     <SSIS:Property SSIS:Name="ID">{0D64F443-0CF7-4232-A34D-342A439AC42F}</SSIS:Property>
                     <SSIS:Property SSIS:Name="CreationName">
                     </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">Do not change!</SSIS:Property>
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
@@ -169,8 +161,7 @@
                     <SSIS:Property SSIS:Name="ID">{FA930613-2846-4D2D-A5D9-C67B7F1C081E}</SSIS:Property>
                     <SSIS:Property SSIS:Name="CreationName">
                     </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">Do not change!</SSIS:Property>
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
@@ -183,8 +174,7 @@
                     <SSIS:Property SSIS:Name="ID">{7F39521E-F63F-4929-A5B2-DE8C077FCB1F}</SSIS:Property>
                     <SSIS:Property SSIS:Name="CreationName">
                     </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">python.exe localization</SSIS:Property>
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
@@ -197,8 +187,7 @@
                     <SSIS:Property SSIS:Name="ID">{818EC195-2233-41CE-A544-BBE0C4AB7E5E}</SSIS:Property>
                     <SSIS:Property SSIS:Name="CreationName">
                     </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">Your local directory path</SSIS:Property>
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
