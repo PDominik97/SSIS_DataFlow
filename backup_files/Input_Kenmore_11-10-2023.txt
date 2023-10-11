@@ -1,0 +1,14 @@
+AddressID,AddressLine1,AddressLine2,City,StateProvinceID,PostalCode,ModifiedDate
+41,793 Crawford Street,,Kenmore,79,98028,2014-03-25 00:00:00
+42,463 H Stagecoach Rd.,,Kenmore,79,98028,2009-01-20 00:00:00
+43,5203 Virginia Lane,,Kenmore,79,98028,2010-02-13 00:00:00
+44,4095 Cooper Dr.,,Kenmore,79,98028,2008-12-27 00:00:00
+45,6697 Ridge Park Drive,,Kenmore,79,98028,2008-11-25 00:00:00
+46,5669 Ironwood Way,,Kenmore,79,98028,2009-01-29 00:00:00
+47,8192 Seagull Court,,Kenmore,79,98028,2009-01-11 00:00:00
+48,5553 Cash Avenue,,Kenmore,79,98028,2014-01-31 00:00:00
+49,7048 Laurel,,Kenmore,79,98028,2009-02-01 00:00:00
+50,25 95th Ave NE,,Kenmore,79,98028,2009-02-06 00:00:00
+32505,5458 Gladstone Drive,,Kenmore,79,98028,2010-11-28 00:00:00
+32511,4155 Working Drive,,Kenmore,79,98028,2010-02-16 00:00:00
+32515,5050 Mt. Wilson Way,,Kenmore,79,98028,2009-02-21 00:00:00
