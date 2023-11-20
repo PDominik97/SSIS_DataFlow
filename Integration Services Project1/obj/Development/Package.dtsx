@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="97"
-  DTS:VersionGUID="{88F95F50-1B76-4AC9-8C40-AF5817F974DB}">
+  DTS:VersionBuild="118"
+  DTS:VersionGUID="{035D50F3-992A-44CC-B417-E67EDA97447F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -31,6 +31,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager Foreach Loop]"
       DTS:CreationName="FLATFILE"
+      DTS:DelayValidation="True"
       DTS:DTSID="{295B4759-9098-455C-9E8F-70490A513740}"
       DTS:ObjectName="Flat File Connection Manager Foreach Loop">
       <DTS:PropertyExpression
@@ -53,7 +54,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AddressID"
-              DTS:DTSID="{60D06BFF-4607-4223-8D09-A96A2B6541A3}"
+              DTS:DTSID="{4A8D8061-B5F7-43C2-B64B-DCA7EF311CFF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -62,7 +63,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AddressLine1"
-              DTS:DTSID="{6E1B2190-F801-44AC-9F08-F82CEB66C3EA}"
+              DTS:DTSID="{167D666F-9A6B-4C43-908D-BCB2C3E8CC65}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -71,7 +72,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AddressLine2"
-              DTS:DTSID="{217CC937-69D0-49FB-9605-628895AACA9D}"
+              DTS:DTSID="{458D6EEF-7B68-4F20-A5E1-3D92F3A6CF63}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -80,7 +81,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="City"
-              DTS:DTSID="{3F0D9870-FA63-4145-8BD9-204514C7752F}"
+              DTS:DTSID="{8781113C-90EC-40FB-A884-51580B11FB79}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -89,7 +90,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="StateProvinceID"
-              DTS:DTSID="{83525E66-57EA-41F1-B69E-07C65181652D}"
+              DTS:DTSID="{4920C8B5-ACE3-4354-91B4-402A727BFBDA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -98,7 +99,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="PostalCode"
-              DTS:DTSID="{CD25E4E2-57F6-40B1-AD97-A3A7690D376A}"
+              DTS:DTSID="{34CAD4A5-4C4A-4127-AD23-FF8BF82AA0B0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -107,7 +108,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ModifiedDate"
-              DTS:DTSID="{E189E858-ED8C-4C71-8324-C3B9646955CE}"
+              DTS:DTSID="{D651BE5C-7A50-4948-95A0-59446699C9AC}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -364,8 +365,18 @@
     <DTS:PackageParameter
       DTS:CreationName=""
       DTS:DataType="8"
-      DTS:DTSID="{7E247766-9ECC-4908-894C-D39B94EF172B}"
+      DTS:DTSID="{1D3B7083-FB8D-43B6-95C2-E91BFA0DEDD0}"
       DTS:ObjectName="BackupInputFiles_Arguments">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">\backup_files</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:Description="Do not change!"
+      DTS:DTSID="{7E247766-9ECC-4908-894C-D39B94EF172B}"
+      DTS:ObjectName="copy_file_script_path">
       <DTS:Property
         DTS:DataType="8"
         DTS:Name="ParameterValue">\Copy_file.py</DTS:Property>
@@ -373,6 +384,7 @@
     <DTS:PackageParameter
       DTS:CreationName=""
       DTS:DataType="8"
+      DTS:Description="Do not change! WorkingDirectory_path + Input_Kenmore parameter"
       DTS:DTSID="{E69BD53D-B3A6-4AD4-BEE0-AFA09AB90DF8}"
       DTS:ObjectName="FlatFileConnectionManagerKenmore_ConnectionString">
       <DTS:Property
@@ -382,6 +394,7 @@
     <DTS:PackageParameter
       DTS:CreationName=""
       DTS:DataType="8"
+      DTS:Description="Do not change! WorkingDirectory_path + Input_Renton parameter"
       DTS:DTSID="{DBCD4CC2-F2C7-4330-94C8-BEFA1D3825D3}"
       DTS:ObjectName="FlatFileConnectionManagerRenton_ConnectionString">
       <DTS:Property
@@ -391,6 +404,7 @@
     <DTS:PackageParameter
       DTS:CreationName=""
       DTS:DataType="8"
+      DTS:Description="Do not change! WorkingDirectory_path + Input_Seattle parameter"
       DTS:DTSID="{75A903FC-A16E-4160-B5C1-662D3EE32906}"
       DTS:ObjectName="FlatFileConnectionManagerSeattle_ConnectionString">
       <DTS:Property
@@ -400,16 +414,7 @@
     <DTS:PackageParameter
       DTS:CreationName=""
       DTS:DataType="8"
-      DTS:DTSID="{BCEC982E-67D4-4DC5-935D-D0D95F1B3F10}"
-      DTS:ObjectName="ForEachContainer">
-      <DTS:Property
-        DTS:DataType="8"
-        DTS:Name="ParameterValue">Input*.txt</DTS:Property>
-    </DTS:PackageParameter>
-    <DTS:PackageParameter
-      DTS:CreationName=""
-      DTS:DataType="8"
-      DTS:DTSID="{4A5C34F2-9818-4172-B936-3AD2F5FBBF32}"
+      DTS:DTSID="{EC90BCD3-4269-4563-AC63-3723B5139D66}"
       DTS:ObjectName="ForEachContainer2">
       <DTS:Property
         DTS:DataType="8"
@@ -418,6 +423,7 @@
     <DTS:PackageParameter
       DTS:CreationName=""
       DTS:DataType="8"
+      DTS:Description="Do not change!"
       DTS:DTSID="{AA8721B5-39F2-4C3E-9745-5B5371D35CEC}"
       DTS:ObjectName="Input_Kenmore">
       <DTS:Property
@@ -427,6 +433,7 @@
     <DTS:PackageParameter
       DTS:CreationName=""
       DTS:DataType="8"
+      DTS:Description="Do not change!"
       DTS:DTSID="{0D64F443-0CF7-4232-A34D-342A439AC42F}"
       DTS:ObjectName="Input_Renton">
       <DTS:Property
@@ -436,6 +443,7 @@
     <DTS:PackageParameter
       DTS:CreationName=""
       DTS:DataType="8"
+      DTS:Description="Do not change!"
       DTS:DTSID="{FA930613-2846-4D2D-A5D9-C67B7F1C081E}"
       DTS:ObjectName="Input_Seattle">
       <DTS:Property
@@ -445,6 +453,7 @@
     <DTS:PackageParameter
       DTS:CreationName=""
       DTS:DataType="8"
+      DTS:Description="python.exe localization"
       DTS:DTSID="{7F39521E-F63F-4929-A5B2-DE8C077FCB1F}"
       DTS:ObjectName="python_path">
       <DTS:Property
@@ -454,6 +463,7 @@
     <DTS:PackageParameter
       DTS:CreationName=""
       DTS:DataType="8"
+      DTS:Description="Your local directory path"
       DTS:DTSID="{818EC195-2233-41CE-A544-BBE0C4AB7E5E}"
       DTS:ObjectName="WorkingDirectory_path">
       <DTS:Property
@@ -467,10 +477,9 @@
       DTS:DTSID="{D655758D-6AD8-41B8-82C9-7061E2AEAE70}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
-      DTS:ObjectName="Zmienna1">
+      DTS:ObjectName="File_name">
       <DTS:VariableValue
-        DTS:DataType="8"
-        xml:space="preserve"></DTS:VariableValue>
+        DTS:DataType="8">\Input*.txt</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -485,7 +494,7 @@
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:PropertyExpression
-        DTS:Name="Arguments">@[$Package::WorkingDirectory_path]+ @[$Package::BackupInputFiles_Arguments]</DTS:PropertyExpression>
+        DTS:Name="Arguments">@[$Package::WorkingDirectory_path]+ @[$Package::copy_file_script_path]</DTS:PropertyExpression>
       <DTS:PropertyExpression
         DTS:Name="Executable">@[$Package::python_path]</DTS:PropertyExpression>
       <DTS:PropertyExpression
@@ -1648,6 +1657,7 @@ where city = 'Seattle'</property>
     <DTS:Executable
       DTS:refId="Package\Import data into new table"
       DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:DelayValidation="True"
       DTS:Description="Foreach Loop Container"
       DTS:DTSID="{0C2D5AE0-5ACA-4C07-97C3-7D6693F8891D}"
       DTS:ExecutableType="STOCK:FOREACHLOOP"
@@ -1663,7 +1673,7 @@ where city = 'Seattle'</property>
             <FEFEProperty
               Folder="C:\SSIS\SSIS_DataFlow" />
             <FEFEProperty
-              FileSpec="Input*.txt" />
+              FileSpec="\Input*.txt" />
             <FEFEProperty
               FileNameRetrievalType="0" />
             <FEFEProperty
@@ -1672,6 +1682,8 @@ where city = 'Seattle'</property>
         </DTS:ObjectData>
       </DTS:ForEachEnumerator>
       <DTS:Variables />
+      <DTS:PropertyExpression
+        DTS:Name="ForEachEnumerator">@[User::File_name]</DTS:PropertyExpression>
       <DTS:Executables>
         <DTS:Executable
           DTS:refId="Package\Import data into new table\Data Flow Task"
@@ -1710,8 +1722,8 @@ where city = 'Seattle'</property>
                   <connections>
                     <connection
                       refId="Package\Import data into new table\Data Flow Task\Flat File Source.Connections[FlatFileConnection]"
-                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager Foreach Loop]"
-                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager Foreach Loop]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager Kenmore]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager Kenmore]"
                       name="FlatFileConnection" />
                   </connections>
                   <outputs>
@@ -1874,45 +1886,35 @@ where city = 'Seattle'</property>
                         isUsed="True">
                         <externalMetadataColumn
                           refId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressID]"
-                          codePage="1250"
-                          dataType="str"
-                          length="50"
+                          dataType="i4"
                           name="AddressID" />
                         <externalMetadataColumn
                           refId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressLine1]"
-                          codePage="1250"
-                          dataType="str"
-                          length="50"
+                          dataType="wstr"
+                          length="60"
                           name="AddressLine1" />
                         <externalMetadataColumn
                           refId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressLine2]"
-                          codePage="1250"
-                          dataType="str"
-                          length="50"
+                          dataType="wstr"
+                          length="60"
                           name="AddressLine2" />
                         <externalMetadataColumn
                           refId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[City]"
-                          codePage="1250"
-                          dataType="str"
-                          length="50"
+                          dataType="wstr"
+                          length="30"
                           name="City" />
                         <externalMetadataColumn
                           refId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StateProvinceID]"
-                          codePage="1250"
-                          dataType="str"
-                          length="50"
+                          dataType="i4"
                           name="StateProvinceID" />
                         <externalMetadataColumn
                           refId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PostalCode]"
-                          codePage="1250"
-                          dataType="str"
-                          length="50"
+                          dataType="wstr"
+                          length="15"
                           name="PostalCode" />
                         <externalMetadataColumn
                           refId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ModifiedDate]"
-                          codePage="1250"
-                          dataType="str"
-                          length="50"
+                          dataType="dbTimeStamp"
                           name="ModifiedDate" />
                       </externalMetadataColumns>
                     </output>
@@ -2147,10 +2149,10 @@ where city = 'Seattle'</property>
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{1026EFDD-9014-4A3D-89FE-7B9961829D13}"
-          DTS:ObjectName="{1026EFDD-9014-4A3D-89FE-7B9961829D13}"
+          DTS:DTSID="{BA5DDB3F-3197-478A-9F5D-442D97C04FE5}"
+          DTS:ObjectName="{BA5DDB3F-3197-478A-9F5D-442D97C04FE5}"
           DTS:ValueIndex="0"
-          DTS:VariableName="User::Zmienna1" />
+          DTS:VariableName="User::File_name" />
       </DTS:ForEachVariableMappings>
     </DTS:Executable>
   </DTS:Executables>
@@ -2193,7 +2195,7 @@ where city = 'Seattle'</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="158.666666666667,41.3333333333334"
+          Size="162.666666666667,42.6666666666667"
           Id="Package\backup input files"
           TopLeft="794.814783231713,298.422224593869" />
         <NodeLayout
@@ -2270,9 +2272,9 @@ where city = 'Seattle'</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="164.648132558958,59.3555574175163"
+              EndConnector="166.648132558958,59.3555574175163"
               Start="0,0"
-              End="164.648132558958,51.8555574175163">
+              End="166.648132558958,51.8555574175163">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -2283,13 +2285,13 @@ where city = 'Seattle'</property>
                     Point2="0,19.9896838503436"
                     Point3="4,19.9896838503436" />
                   <mssgle:LineSegment
-                    End="160.648132558958,19.9896838503436" />
+                    End="162.648132558958,19.9896838503436" />
                   <mssgle:CubicBezierSegment
-                    Point1="160.648132558958,19.9896838503436"
-                    Point2="164.648132558958,19.9896838503436"
-                    Point3="164.648132558958,23.9896838503436" />
+                    Point1="162.648132558958,19.9896838503436"
+                    Point2="166.648132558958,19.9896838503436"
+                    Point3="166.648132558958,23.9896838503436" />
                   <mssgle:LineSegment
-                    End="164.648132558958,51.8555574175163" />
+                    End="166.648132558958,51.8555574175163" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2304,26 +2306,26 @@ where city = 'Seattle'</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="43.9780106579962,113.21540183862"
+              EndConnector="43.9780106579966,113.215401838619"
               Start="0,0"
-              End="43.9780106579962,105.71540183862">
+              End="43.9780106579966,105.715401838619">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.6077009193098" />
+                    End="0,52.6077009193097" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,52.6077009193098"
-                    Point2="0,56.6077009193098"
-                    Point3="4,56.6077009193098" />
+                    Point1="0,52.6077009193097"
+                    Point2="0,56.6077009193097"
+                    Point3="4,56.6077009193097" />
                   <mssgle:LineSegment
-                    End="39.9780106579962,56.6077009193098" />
+                    End="39.9780106579966,56.6077009193097" />
                   <mssgle:CubicBezierSegment
-                    Point1="39.9780106579962,56.6077009193098"
-                    Point2="43.9780106579962,56.6077009193098"
-                    Point3="43.9780106579962,60.6077009193098" />
+                    Point1="39.9780106579966,56.6077009193097"
+                    Point2="43.9780106579966,56.6077009193097"
+                    Point3="43.9780106579966,60.6077009193097" />
                   <mssgle:LineSegment
-                    End="43.9780106579962,105.71540183862" />
+                    End="43.9780106579966,105.715401838619" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2390,15 +2392,15 @@ where city = 'Seattle'</property>
     design-time-name="Package\Export data to flat file\Renton City">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="152,41.3333333333334"
-          Id="Package\Export data to flat file\Renton City\OLE DB Source"
-          TopLeft="225,43" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="170.666666666667,85.3333333333334"
           Id="Package\Export data to flat file\Renton City\Flat File Destination"
           TopLeft="218,183" />
+        <NodeLayout
+          Size="152,41.3333333333334"
+          Id="Package\Export data to flat file\Renton City\OLE DB Source"
+          TopLeft="225,43" />
         <EdgeLayout
           Id="Package\Export data to flat file\Renton City.Paths[OLE DB Source Output]"
           TopLeft="302.1,84.6">
@@ -2418,7 +2420,9 @@ where city = 'Seattle'</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -2441,7 +2445,7 @@ where city = 'Seattle'</property>
     design-time-name="Package\Export data to flat file\Seattle City">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="170.666666666667,53.3333333333334"
           Id="Package\Export data to flat file\Seattle City\Flat File Destination"
@@ -2469,7 +2473,9 @@ where city = 'Seattle'</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -2494,27 +2500,27 @@ where city = 'Seattle'</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="151.333333333334,41.3333333333334"
-          Id="Package\Import data into new table\Data Flow Task\Flat File Source"
-          TopLeft="271,105" />
-        <NodeLayout
           Size="174.666666666667,42.6666666666667"
           Id="Package\Import data into new table\Data Flow Task\OLE DB Destination"
           TopLeft="256,261" />
+        <NodeLayout
+          Size="151.333333333334,41.3333333333334"
+          Id="Package\Import data into new table\Data Flow Task\Flat File Source"
+          TopLeft="270,104" />
         <EdgeLayout
           Id="Package\Import data into new table\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="345,146.333333333333">
+          TopLeft="344.5,145.333333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,114.666666666667"
+              EndConnector="0,115.666666666667"
               Start="0,0"
-              End="0,107.166666666667">
+              End="0,108.166666666667">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,107.166666666667" />
+                    End="0,108.166666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
