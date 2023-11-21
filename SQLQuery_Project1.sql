@@ -1,11 +1,11 @@
 
-CREATE TABLE My_PersonAdress2(
+CREATE TABLE My_PersonAdress(
 	[AddressID] [int],
-	[AddressLine1] [nvarchar](60) NOT NULL,
-	[AddressLine2] [nvarchar](60) NULL,
-	[City] [nvarchar](50) NOT NULL,
+	[AddressLine1] [nvarchar](100) NOT NULL,
+	[AddressLine2] [nvarchar](100) NULL,
+	[City] [nvarchar](100) NOT NULL,
 	[StateProvinceID] [int] NOT NULL,
-	[PostalCode] [nvarchar](50) NOT NULL,
+	[PostalCode] [nvarchar](100) NOT NULL,
 	[ModifiedDate] [datetime] NOT NULL)
 
 CREATE TABLE SSIS_execute(
