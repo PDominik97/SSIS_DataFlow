@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-BHU8VRP</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnjthYQuUQEOlQVSIXoF5NAAAAAACAAAAAAAQZgAAAAEAACAAAAASEd+V8anN3Px6RyMPxYz1h8d6amo+/WPfu4SuJBEtVQAAAAAOgAAAAAIAACAAAADTKeFT7itqexeeBKblZmbU9+2rGBKFIiugue3Zv9LO+JAAAAAfsNDzswVIgPNa9/l4fXLkuivMkTq1+0dIUMlBiGGy9O2aGLRUxTMsVO08WxCldeDwtDhOYNxJormsENZ18ZeE1U39T/yG2oCe22EwTrw52ZIR97onmI4HVyTV3QqBiiHgMqd5Yox8JX1Mk6bQFBtNVuyue04/kwdwwKRvathUo2u8h0PaMm+7hR6wGeG3DDJAAAAAiWlGpu4cCdEHHPTqaJkfBwf/3oubC99pK2TiD8ldJ2F/P3lCuz1UJfr6/sgPciVLIHjw6CKPd4xvZBxAccKExA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnjthYQuUQEOlQVSIXoF5NAAAAAACAAAAAAAQZgAAAAEAACAAAAC/QAx+vSfIWp9UufeES8WfZuqB7tkqZiEVCulreO180wAAAAAOgAAAAAIAACAAAADhKFT9urtvGIlAzYo+8Ntbs+TwLGr80MGWMa5RUheyLpAAAAClzvzLed0pw7Y+WDurayfCIy9Vvwa2FSWyxTCM+3896IsKu7Hh0XYmbJ4o4DCCoPb44DjrqNtDnCWhL5ofo8+jIvRNR9WrdYFRGtZYlZ3uNiR3QVRhuE8iDTP8B9n8lxDtqcJvsRnV1GGz2nAdqK/S3zvY1GopMviKFfQ0WfcOb8hft7O8bQzDWSdUpeAezDlAAAAANrz/D/JvdPGdmrIG0ixRgDeN83RUxabj6PxnzLJIBIapvtXEBqeyCaC9xN7BeQC+bD7uWQl1aEtuSENsCiGpaQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,10 +42,10 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">114</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">122</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{740FCA88-E4C7-4B75-A664-D38E17E4705B}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{5E50E2D1-6AFB-49D5-98D7-D75BA06AF630}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -345,7 +345,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.Flat File Connection Manager Foreach Loop.AlwaysCheckForRowDelimiters">
+                <SSIS:Parameter SSIS:Name="CM.Flat File Connection Manager FEL.AlwaysCheckForRowDelimiters">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -360,7 +360,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.Flat File Connection Manager Foreach Loop.CodePage">
+                <SSIS:Parameter SSIS:Name="CM.Flat File Connection Manager FEL.CodePage">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -375,7 +375,7 @@
                     <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.Flat File Connection Manager Foreach Loop.ColumnNamesInFirstDataRow">
+                <SSIS:Parameter SSIS:Name="CM.Flat File Connection Manager FEL.ColumnNamesInFirstDataRow">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -390,7 +390,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.Flat File Connection Manager Foreach Loop.ConnectByProxy">
+                <SSIS:Parameter SSIS:Name="CM.Flat File Connection Manager FEL.ConnectByProxy">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -405,7 +405,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.Flat File Connection Manager Foreach Loop.DataRowsToSkip">
+                <SSIS:Parameter SSIS:Name="CM.Flat File Connection Manager FEL.DataRowsToSkip">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -420,7 +420,7 @@
                     <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.Flat File Connection Manager Foreach Loop.Format">
+                <SSIS:Parameter SSIS:Name="CM.Flat File Connection Manager FEL.Format">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -435,7 +435,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.Flat File Connection Manager Foreach Loop.HeaderRowDelimiter">
+                <SSIS:Parameter SSIS:Name="CM.Flat File Connection Manager FEL.HeaderRowDelimiter">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -451,7 +451,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.Flat File Connection Manager Foreach Loop.HeaderRowsToSkip">
+                <SSIS:Parameter SSIS:Name="CM.Flat File Connection Manager FEL.HeaderRowsToSkip">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -466,7 +466,7 @@
                     <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.Flat File Connection Manager Foreach Loop.LocaleID">
+                <SSIS:Parameter SSIS:Name="CM.Flat File Connection Manager FEL.LocaleID">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -481,7 +481,7 @@
                     <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.Flat File Connection Manager Foreach Loop.RowDelimiter">
+                <SSIS:Parameter SSIS:Name="CM.Flat File Connection Manager FEL.RowDelimiter">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -492,12 +492,10 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.Flat File Connection Manager Foreach Loop.TextQualifier">
+                <SSIS:Parameter SSIS:Name="CM.Flat File Connection Manager FEL.TextQualifier">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -512,7 +510,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.Flat File Connection Manager Foreach Loop.Unicode">
+                <SSIS:Parameter SSIS:Name="CM.Flat File Connection Manager FEL.Unicode">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>

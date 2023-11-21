@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="118"
-  DTS:VersionGUID="{035D50F3-992A-44CC-B417-E67EDA97447F}">
+  DTS:VersionBuild="128"
+  DTS:VersionGUID="{F7F1C676-0DB0-4336-9518-E9987146961F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,13 +29,12 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager Foreach Loop]"
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager FEL]"
       DTS:CreationName="FLATFILE"
-      DTS:DelayValidation="True"
-      DTS:DTSID="{295B4759-9098-455C-9E8F-70490A513740}"
-      DTS:ObjectName="Flat File Connection Manager Foreach Loop">
+      DTS:DTSID="{D203A141-E964-4E10-BCAA-0C6569640EB0}"
+      DTS:ObjectName="Flat File Connection Manager FEL">
       <DTS:PropertyExpression
-        DTS:Name="ConnectionString">@[$Package::WorkingDirectory_path]+ @[$Package::ForEachContainer2]</DTS:PropertyExpression>
+        DTS:Name="ConnectionString">@[User::File_name]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -44,8 +43,7 @@
           DTS:ColumnNamesInFirstDataRow="True"
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1250"
-          DTS:ConnectionString="C:\SSIS\SSIS_DataFlow\Input*.txt">
+          DTS:CodePage="1250">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -54,7 +52,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AddressID"
-              DTS:DTSID="{4A8D8061-B5F7-43C2-B64B-DCA7EF311CFF}"
+              DTS:DTSID="{7D2A80C0-1BDA-4880-A26E-CE46B68981B8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -63,7 +61,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AddressLine1"
-              DTS:DTSID="{167D666F-9A6B-4C43-908D-BCB2C3E8CC65}"
+              DTS:DTSID="{46351137-DE6E-435E-B1FB-732D598DABF0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -72,7 +70,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AddressLine2"
-              DTS:DTSID="{458D6EEF-7B68-4F20-A5E1-3D92F3A6CF63}"
+              DTS:DTSID="{CD2D5DD3-FC67-4658-8D9F-EC403260C450}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -81,7 +79,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="City"
-              DTS:DTSID="{8781113C-90EC-40FB-A884-51580B11FB79}"
+              DTS:DTSID="{3DC6C557-3FF0-4890-8220-F446A21B2E7A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -90,7 +88,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="StateProvinceID"
-              DTS:DTSID="{4920C8B5-ACE3-4354-91B4-402A727BFBDA}"
+              DTS:DTSID="{5DF1124D-0D07-41EB-9797-917B2FA77D2C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -99,7 +97,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="PostalCode"
-              DTS:DTSID="{34CAD4A5-4C4A-4127-AD23-FF8BF82AA0B0}"
+              DTS:DTSID="{77F27520-AA9A-4F43-B981-26FF0FD1109E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -108,7 +106,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ModifiedDate"
-              DTS:DTSID="{D651BE5C-7A50-4948-95A0-59446699C9AC}"
+              DTS:DTSID="{1BCC0464-E6BB-48DC-8F82-4926A9C2344A}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -135,62 +133,65 @@
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="3"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AddressID"
-              DTS:DTSID="{2FCEA247-7700-4F77-A996-34FB7517E5D1}"
+              DTS:DTSID="{57F08A6B-D28A-4016-B460-CA9D496EECBF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="60"
-              DTS:DataType="130"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AddressLine1"
-              DTS:DTSID="{DB5F5C70-582A-4AE0-B8F8-D95161A0B2CB}"
+              DTS:DTSID="{AB935953-417C-4D28-9FF6-DE9C3E1E4951}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="60"
-              DTS:DataType="130"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AddressLine2"
-              DTS:DTSID="{052AC07D-19CF-453A-8350-C8EB6516A75A}"
+              DTS:DTSID="{2F9F63E6-02DA-4666-A0FC-4391BADACD3E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="30"
-              DTS:DataType="130"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="City"
-              DTS:DTSID="{0CAC0340-B584-4D24-91CB-17F6A4D5028D}"
+              DTS:DTSID="{506DFD57-BAF0-4ADD-AEC3-DDDD2994C52F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="3"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="StateProvinceID"
-              DTS:DTSID="{FE7E0788-2E09-455B-B2A8-443B7D5D9118}"
+              DTS:DTSID="{EFF3C54A-FE51-40B6-A0AE-D21B1FFF68F8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="15"
-              DTS:DataType="130"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="PostalCode"
-              DTS:DTSID="{8C7B6D84-EB15-455C-9CAB-681E80362857}"
+              DTS:DTSID="{9D049C9F-E0BD-4685-A881-BF16C2BA1701}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:DataType="135"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ModifiedDate"
-              DTS:DTSID="{2D37D345-A198-448D-A108-FAEE4691550B}"
+              DTS:DTSID="{F3C9C396-1F36-42A0-8A3B-4421F55A205B}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -361,6 +362,17 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
+  <DTS:LogProviders>
+    <DTS:LogProvider
+      DTS:CreationName="Microsoft.LogProviderSQLServer"
+      DTS:Description="Writes log entries for events to a SQL Server database"
+      DTS:DTSID="{6E7CFFAB-65A1-45E0-8591-2B05029A0E5F}"
+      DTS:ObjectName="SSIS log provider for SQL Server">
+      <DTS:ObjectData>
+        <InnerObject />
+      </DTS:ObjectData>
+    </DTS:LogProvider>
+  </DTS:LogProviders>
   <DTS:PackageParameters>
     <DTS:PackageParameter
       DTS:CreationName=""
@@ -479,7 +491,8 @@
       DTS:Namespace="User"
       DTS:ObjectName="File_name">
       <DTS:VariableValue
-        DTS:DataType="8">\Input*.txt</DTS:VariableValue>
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -633,35 +646,45 @@
                         isUsed="True">
                         <externalMetadataColumn
                           refId="Package\Export data to flat file\Kenmore City\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AddressID]"
-                          dataType="i4"
+                          codePage="1250"
+                          dataType="str"
+                          length="50"
                           name="AddressID" />
                         <externalMetadataColumn
                           refId="Package\Export data to flat file\Kenmore City\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AddressLine1]"
-                          dataType="wstr"
-                          length="60"
+                          codePage="1250"
+                          dataType="str"
+                          length="50"
                           name="AddressLine1" />
                         <externalMetadataColumn
                           refId="Package\Export data to flat file\Kenmore City\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AddressLine2]"
-                          dataType="wstr"
-                          length="60"
+                          codePage="1250"
+                          dataType="str"
+                          length="50"
                           name="AddressLine2" />
                         <externalMetadataColumn
                           refId="Package\Export data to flat file\Kenmore City\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[City]"
-                          dataType="wstr"
-                          length="30"
+                          codePage="1250"
+                          dataType="str"
+                          length="50"
                           name="City" />
                         <externalMetadataColumn
                           refId="Package\Export data to flat file\Kenmore City\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[StateProvinceID]"
-                          dataType="i4"
+                          codePage="1250"
+                          dataType="str"
+                          length="50"
                           name="StateProvinceID" />
                         <externalMetadataColumn
                           refId="Package\Export data to flat file\Kenmore City\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PostalCode]"
-                          dataType="wstr"
-                          length="15"
+                          codePage="1250"
+                          dataType="str"
+                          length="50"
                           name="PostalCode" />
                         <externalMetadataColumn
                           refId="Package\Export data to flat file\Kenmore City\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ModifiedDate]"
-                          dataType="dbTimeStamp"
+                          codePage="1250"
+                          dataType="str"
+                          length="50"
                           name="ModifiedDate" />
                       </externalMetadataColumns>
                     </input>
@@ -1655,25 +1678,25 @@ where city = 'Seattle'</property>
       </DTS:Executables>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Import data into new table"
+      DTS:refId="Package\Foreach Loop Container"
       DTS:CreationName="STOCK:FOREACHLOOP"
       DTS:DelayValidation="True"
       DTS:Description="Foreach Loop Container"
-      DTS:DTSID="{0C2D5AE0-5ACA-4C07-97C3-7D6693F8891D}"
+      DTS:DTSID="{999EB0A9-F5E7-42BE-B328-785EA3D24872}"
       DTS:ExecutableType="STOCK:FOREACHLOOP"
       DTS:LocaleID="-1"
       DTS:MaxErrorCount="15"
-      DTS:ObjectName="Import data into new table">
+      DTS:ObjectName="Foreach Loop Container">
       <DTS:ForEachEnumerator
         DTS:CreationName="Microsoft.ForEachFileEnumerator"
-        DTS:DTSID="{698EAED4-303C-4A1D-B204-5FBF917D0651}"
-        DTS:ObjectName="{698EAED4-303C-4A1D-B204-5FBF917D0651}">
+        DTS:DTSID="{26C37C35-AE78-416B-8AD4-94721B9EDC74}"
+        DTS:ObjectName="{26C37C35-AE78-416B-8AD4-94721B9EDC74}">
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
               Folder="C:\SSIS\SSIS_DataFlow" />
             <FEFEProperty
-              FileSpec="\Input*.txt" />
+              FileSpec="*.txt" />
             <FEFEProperty
               FileNameRetrievalType="0" />
             <FEFEProperty
@@ -1682,17 +1705,16 @@ where city = 'Seattle'</property>
         </DTS:ObjectData>
       </DTS:ForEachEnumerator>
       <DTS:Variables />
-      <DTS:PropertyExpression
-        DTS:Name="ForEachEnumerator">@[User::File_name]</DTS:PropertyExpression>
       <DTS:Executables>
         <DTS:Executable
-          DTS:refId="Package\Import data into new table\Data Flow Task"
+          DTS:refId="Package\Foreach Loop Container\Data Flow Task"
           DTS:CreationName="Microsoft.Pipeline"
+          DTS:DelayValidation="True"
           DTS:Description="Data Flow Task"
-          DTS:DTSID="{1AD83944-9BBB-417F-A7A8-1B83102FF79B}"
+          DTS:DTSID="{CF63B019-7197-47B0-8672-1B614A20B3FD}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
-          DTS:MaxErrorCount="5"
+          DTS:MaxErrorCount="15"
           DTS:ObjectName="Data Flow Task"
           DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
@@ -1701,7 +1723,169 @@ where city = 'Seattle'</property>
               version="1">
               <components>
                 <component
-                  refId="Package\Import data into new table\Data Flow Task\Flat File Source"
+                  refId="Package\Foreach Loop Container\Data Flow Task\Data Conversion"
+                  componentClassID="Microsoft.DataConvert"
+                  contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Data Conversion"
+                  name="Data Conversion"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+                      name="Data Conversion Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[AddressLine1]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="AddressLine1"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine1]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[AddressLine2]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="AddressLine2"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine2]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[City]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="City"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[City]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[PostalCode]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="PostalCode"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[PostalCode]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]"
+                      exclusionGroup="1"
+                      name="Data Conversion Output"
+                      synchronousInputId="Package\Foreach Loop Container\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of AddressLine1]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of AddressLine1]"
+                          name="Copy of AddressLine1"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine1]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of AddressLine2]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of AddressLine2]"
+                          name="Copy of AddressLine2"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine2]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]"
+                          name="Copy of City"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[City]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PostalCode]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PostalCode]"
+                          name="Copy of PostalCode"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[PostalCode]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Data Conversion Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source"
                   componentClassID="Microsoft.FlatFileSource"
                   contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
                   description="Flat File Source"
@@ -1721,25 +1905,25 @@ where city = 'Seattle'</property>
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\Import data into new table\Data Flow Task\Flat File Source.Connections[FlatFileConnection]"
-                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager Kenmore]"
-                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager Kenmore]"
+                      refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager FEL]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager FEL]"
                       name="FlatFileConnection" />
                   </connections>
                   <outputs>
                     <output
-                      refId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]"
+                      refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]"
                       name="Flat File Source Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressID]"
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressID]"
                           codePage="1250"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressID]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressID]"
                           length="50"
-                          lineageId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressID]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressID]"
                           name="AddressID"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -1754,13 +1938,14 @@ where city = 'Seattle'</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine1]"
-                          dataType="wstr"
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine1]"
+                          codePage="1250"
+                          dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressLine1]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressLine1]"
                           length="50"
-                          lineageId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine1]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine1]"
                           name="AddressLine1"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -1775,13 +1960,14 @@ where city = 'Seattle'</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine2]"
-                          dataType="wstr"
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine2]"
+                          codePage="1250"
+                          dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressLine2]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressLine2]"
                           length="50"
-                          lineageId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine2]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine2]"
                           name="AddressLine2"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -1796,13 +1982,14 @@ where city = 'Seattle'</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[City]"
-                          dataType="wstr"
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[City]"
+                          codePage="1250"
+                          dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[City]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[City]"
                           length="50"
-                          lineageId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[City]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[City]"
                           name="City"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -1817,14 +2004,14 @@ where city = 'Seattle'</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[StateProvinceID]"
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[StateProvinceID]"
                           codePage="1250"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StateProvinceID]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StateProvinceID]"
                           length="50"
-                          lineageId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[StateProvinceID]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[StateProvinceID]"
                           name="StateProvinceID"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -1839,13 +2026,14 @@ where city = 'Seattle'</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[PostalCode]"
-                          dataType="wstr"
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[PostalCode]"
+                          codePage="1250"
+                          dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PostalCode]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PostalCode]"
                           length="50"
-                          lineageId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[PostalCode]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[PostalCode]"
                           name="PostalCode"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -1860,14 +2048,14 @@ where city = 'Seattle'</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ModifiedDate]"
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ModifiedDate]"
                           codePage="1250"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ModifiedDate]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ModifiedDate]"
                           length="50"
-                          lineageId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ModifiedDate]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ModifiedDate]"
                           name="ModifiedDate"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -1885,61 +2073,71 @@ where city = 'Seattle'</property>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressID]"
-                          dataType="i4"
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressID]"
+                          codePage="1250"
+                          dataType="str"
+                          length="50"
                           name="AddressID" />
                         <externalMetadataColumn
-                          refId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressLine1]"
-                          dataType="wstr"
-                          length="60"
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressLine1]"
+                          codePage="1250"
+                          dataType="str"
+                          length="50"
                           name="AddressLine1" />
                         <externalMetadataColumn
-                          refId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressLine2]"
-                          dataType="wstr"
-                          length="60"
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressLine2]"
+                          codePage="1250"
+                          dataType="str"
+                          length="50"
                           name="AddressLine2" />
                         <externalMetadataColumn
-                          refId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[City]"
-                          dataType="wstr"
-                          length="30"
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[City]"
+                          codePage="1250"
+                          dataType="str"
+                          length="50"
                           name="City" />
                         <externalMetadataColumn
-                          refId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StateProvinceID]"
-                          dataType="i4"
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StateProvinceID]"
+                          codePage="1250"
+                          dataType="str"
+                          length="50"
                           name="StateProvinceID" />
                         <externalMetadataColumn
-                          refId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PostalCode]"
-                          dataType="wstr"
-                          length="15"
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PostalCode]"
+                          codePage="1250"
+                          dataType="str"
+                          length="50"
                           name="PostalCode" />
                         <externalMetadataColumn
-                          refId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ModifiedDate]"
-                          dataType="dbTimeStamp"
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ModifiedDate]"
+                          codePage="1250"
+                          dataType="str"
+                          length="50"
                           name="ModifiedDate" />
                       </externalMetadataColumns>
                     </output>
                     <output
-                      refId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output]"
+                      refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output]"
                       isErrorOut="true"
                       name="Flat File Source Error Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                           codePage="1250"
                           dataType="text"
                           description="Flat File Source Error Output Column"
-                          lineageId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                           name="Flat File Source Error Output Column" />
                         <outputColumn
-                          refId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -1948,7 +2146,7 @@ where city = 'Seattle'</property>
                   </outputs>
                 </component>
                 <component
-                  refId="Package\Import data into new table\Data Flow Task\OLE DB Destination"
+                  refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination"
                   componentClassID="Microsoft.OLEDBDestination"
                   contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
                   description="OLE DB Destination"
@@ -1997,7 +2195,7 @@ where city = 'Seattle'</property>
                     <property
                       dataType="System.String"
                       description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                      name="FastLoadOptions"></property>
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -2005,7 +2203,7 @@ where city = 'Seattle'</property>
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\Import data into new table\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                      refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
                       connectionManagerID="Package.ConnectionManagers[DESKTOP-9J527KO.AdventureWorksLT2019]"
                       connectionManagerRefId="Package.ConnectionManagers[DESKTOP-9J527KO.AdventureWorksLT2019]"
                       description="The OLE DB runtime connection used to access the database."
@@ -2013,97 +2211,97 @@ where city = 'Seattle'</property>
                   </connections>
                   <inputs>
                     <input
-                      refId="Package\Import data into new table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
                       errorOrTruncationOperation="Insert"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="IgnoreFailure"
                       hasSideEffects="true"
                       name="OLE DB Destination Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Import data into new table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AddressID]"
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AddressID]"
                           cachedCodepage="1250"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="AddressID"
-                          externalMetadataColumnId="Package\Import data into new table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressID]"
-                          lineageId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressID]" />
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressID]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressID]" />
                         <inputColumn
-                          refId="Package\Import data into new table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AddressLine1]"
-                          cachedDataType="wstr"
-                          cachedLength="50"
-                          cachedName="AddressLine1"
-                          externalMetadataColumnId="Package\Import data into new table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine1]"
-                          lineageId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine1]" />
-                        <inputColumn
-                          refId="Package\Import data into new table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AddressLine2]"
-                          cachedDataType="wstr"
-                          cachedLength="50"
-                          cachedName="AddressLine2"
-                          externalMetadataColumnId="Package\Import data into new table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine2]"
-                          lineageId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine2]" />
-                        <inputColumn
-                          refId="Package\Import data into new table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StateProvinceID]"
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StateProvinceID]"
                           cachedCodepage="1250"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="StateProvinceID"
-                          externalMetadataColumnId="Package\Import data into new table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StateProvinceID]"
-                          lineageId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[StateProvinceID]" />
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StateProvinceID]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[StateProvinceID]" />
                         <inputColumn
-                          refId="Package\Import data into new table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ModifiedDate]"
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ModifiedDate]"
                           cachedCodepage="1250"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="ModifiedDate"
-                          externalMetadataColumnId="Package\Import data into new table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ModifiedDate]"
-                          lineageId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ModifiedDate]" />
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ModifiedDate]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ModifiedDate]" />
                         <inputColumn
-                          refId="Package\Import data into new table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PostalCode]"
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of AddressLine1]"
                           cachedDataType="wstr"
                           cachedLength="50"
-                          cachedName="PostalCode"
-                          externalMetadataColumnId="Package\Import data into new table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
-                          lineageId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[PostalCode]" />
+                          cachedName="Copy of AddressLine1"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine1]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of AddressLine1]" />
                         <inputColumn
-                          refId="Package\Import data into new table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[City]"
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of AddressLine2]"
                           cachedDataType="wstr"
                           cachedLength="50"
-                          cachedName="City"
-                          externalMetadataColumnId="Package\Import data into new table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[City]"
-                          lineageId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[City]" />
+                          cachedName="Copy of AddressLine2"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine2]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of AddressLine2]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of City]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Copy of City"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of PostalCode]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Copy of PostalCode"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PostalCode]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Import data into new table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressID]"
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressID]"
                           dataType="i4"
                           name="AddressID" />
                         <externalMetadataColumn
-                          refId="Package\Import data into new table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine1]"
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine1]"
                           dataType="wstr"
-                          length="60"
+                          length="100"
                           name="AddressLine1" />
                         <externalMetadataColumn
-                          refId="Package\Import data into new table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine2]"
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine2]"
                           dataType="wstr"
-                          length="60"
+                          length="100"
                           name="AddressLine2" />
                         <externalMetadataColumn
-                          refId="Package\Import data into new table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[City]"
                           dataType="wstr"
-                          length="50"
+                          length="100"
                           name="City" />
                         <externalMetadataColumn
-                          refId="Package\Import data into new table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StateProvinceID]"
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StateProvinceID]"
                           dataType="i4"
                           name="StateProvinceID" />
                         <externalMetadataColumn
-                          refId="Package\Import data into new table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
                           dataType="wstr"
-                          length="50"
+                          length="100"
                           name="PostalCode" />
                         <externalMetadataColumn
-                          refId="Package\Import data into new table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ModifiedDate]"
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ModifiedDate]"
                           dataType="dbTimeStamp"
                           name="ModifiedDate" />
                       </externalMetadataColumns>
@@ -2111,22 +2309,22 @@ where city = 'Seattle'</property>
                   </inputs>
                   <outputs>
                     <output
-                      refId="Package\Import data into new table\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                      refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
                       exclusionGroup="1"
                       isErrorOut="true"
                       name="OLE DB Destination Error Output"
-                      synchronousInputId="Package\Import data into new table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                      synchronousInputId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Import data into new table\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\Import data into new table\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\Import data into new table\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\Import data into new table\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -2137,10 +2335,15 @@ where city = 'Seattle'</property>
               </components>
               <paths>
                 <path
-                  refId="Package\Import data into new table\Data Flow Task.Paths[Flat File Source Output]"
-                  endId="Package\Import data into new table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Foreach Loop Container\Data Flow Task.Paths[Data Conversion Output]"
+                  endId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="Data Conversion Output"
+                  startId="Package\Foreach Loop Container\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\Data Flow Task.Paths[Flat File Source Output]"
+                  endId="Package\Foreach Loop Container\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
                   name="Flat File Source Output"
-                  startId="Package\Import data into new table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
+                  startId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
@@ -2149,22 +2352,38 @@ where city = 'Seattle'</property>
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{BA5DDB3F-3197-478A-9F5D-442D97C04FE5}"
-          DTS:ObjectName="{BA5DDB3F-3197-478A-9F5D-442D97C04FE5}"
+          DTS:DTSID="{1BABCDFA-410B-4DBB-963F-F57501071E7C}"
+          DTS:ObjectName="{1BABCDFA-410B-4DBB-963F-F57501071E7C}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::File_name" />
       </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\if not exist, create table SSIS_execute"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{DA784D81-1E84-4685-976E-0AE10EF1B811}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="if not exist, create table SSIS_execute"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{D61A419A-3197-4FF8-B0AD-4C730A15C526}"
+          SQLTask:SqlStatementSource="if not exists(&#xA;select * from information_schema.tables&#xA;where table_name = 'SSIS_execute')&#xA;begin&#xA;CREATE TABLE SSIS_execute(&#xA;&#x9;[DbLogID] [int] IDENTITY(1,1) NOT NULL,&#xA;&#x9;[ExecuteTime] [datetime] NOT NULL)&#xA;end" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{4DD09BC6-569F-4678-8382-5390BC902C1C}"
+      DTS:DTSID="{A606BA24-4DB1-4914-97A0-B0BDAEB59936}"
       DTS:From="Package\Export data to flat file"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\Execute Time" />
+      DTS:To="Package\if not exist, create table SSIS_execute" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
@@ -2174,13 +2393,21 @@ where city = 'Seattle'</property>
       DTS:ObjectName="Constraint 1"
       DTS:To="Package\backup input files" />
     <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
       DTS:CreationName=""
-      DTS:DTSID="{FD6447B1-3A4E-4A9B-B586-8C28B0EFB0C9}"
+      DTS:DTSID="{812C7243-F663-4874-8118-70E180051E01}"
       DTS:From="Package\Export data to flat file"
       DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint 2"
-      DTS:To="Package\Import data into new table" />
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Foreach Loop Container" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{FA5FF9F2-8488-441C-BEB5-EC5D6D02A836}"
+      DTS:From="Package\if not exist, create table SSIS_execute"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Execute Time" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -2201,7 +2428,7 @@ where city = 'Seattle'</property>
         <NodeLayout
           Size="141.333333333334,41.3333333333334"
           Id="Package\Execute Time"
-          TopLeft="303.433318001695,289.266668946478" />
+          TopLeft="204.21456948017,399.595618391568" />
         <NodeLayout
           Size="141.333333333334,41.3333333333334"
           Id="Package\Export data to flat file\Kenmore City"
@@ -2221,51 +2448,6 @@ where city = 'Seattle'</property>
           Size="513.333333333334,161.333333333334"
           Id="Package\Export data to flat file"
           TopLeft="326.499984006088,77.7333338430193" />
-        <NodeLayout
-          Size="150.666666666667,41.3333333333334"
-          Id="Package\Import data into new table\Data Flow Task"
-          TopLeft="162.42960858404,40.2370399451549" />
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="520.666666666667,137.333333333334"
-          Size="520.666666666667,180"
-          Id="Package\Import data into new table"
-          TopLeft="366.811327997418,352.282069014972" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="456.833317339421,239.066667176353">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-82.7333326710597,50.2000017701253"
-              Start="0,0"
-              End="-82.7333326710597,42.7000017701253">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,12.9062882791723" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12.9062882791723"
-                    Point2="0,16.9062882791723"
-                    Point3="-4,16.9062882791723" />
-                  <mssgle:LineSegment
-                    End="-78.7333326710597,16.9062882791723" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-78.7333326710597,16.9062882791723"
-                    Point2="-82.7333326710597,16.9062882791723"
-                    Point3="-82.7333326710597,20.9062882791723" />
-                  <mssgle:LineSegment
-                    End="-82.7333326710597,42.7000017701253" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="709.499984006088,239.066667176353">
@@ -2300,32 +2482,115 @@ where city = 'Seattle'</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="260,42.6666666666667"
+          Id="Package\if not exist, create table SSIS_execute"
+          TopLeft="217.968746752013,313.68421506601" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="583.166650672755,239.066667176353">
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="456.833317339421,239.066667176353">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="43.9780106579966,113.215401838619"
+              EndConnector="-108.864570587409,74.6175478896577"
               Start="0,0"
-              End="43.9780106579966,105.715401838619">
+              End="-108.864570587409,67.1175478896577">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.6077009193097" />
+                    End="0,21.1295962315729" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,52.6077009193097"
-                    Point2="0,56.6077009193097"
-                    Point3="4,56.6077009193097" />
+                    Point1="0,21.1295962315729"
+                    Point2="0,25.1295962315729"
+                    Point3="-4,25.1295962315729" />
                   <mssgle:LineSegment
-                    End="39.9780106579966,56.6077009193097" />
+                    End="-104.864570587409,25.1295962315729" />
                   <mssgle:CubicBezierSegment
-                    Point1="39.9780106579966,56.6077009193097"
-                    Point2="43.9780106579966,56.6077009193097"
-                    Point3="43.9780106579966,60.6077009193097" />
+                    Point1="-104.864570587409,25.1295962315729"
+                    Point2="-108.864570587409,25.1295962315729"
+                    Point3="-108.864570587409,29.1295962315729" />
                   <mssgle:LineSegment
-                    End="43.9780106579966,105.715401838619" />
+                    End="-108.864570587409,67.1175478896577" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="347.968746752013,356.350881732677">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-73.0875106051762,43.2447366588908"
+              Start="0,0"
+              End="-73.0875106051762,35.7447366588908">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.6223683294454" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.6223683294454"
+                    Point2="0,21.6223683294454"
+                    Point3="-4,21.6223683294454" />
+                  <mssgle:LineSegment
+                    End="-69.0875106051762,21.6223683294454" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-69.0875106051762,21.6223683294454"
+                    Point2="-73.0875106051762,21.6223683294454"
+                    Point3="-73.0875106051762,25.6223683294454" />
+                  <mssgle:LineSegment
+                    End="-73.0875106051762,35.7447366588908" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="153.333333333334,42.6666666666667"
+          Id="Package\Foreach Loop Container\Data Flow Task"
+          TopLeft="69.7083216452351,32.4298284249733" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="291.333333333334,136.666666666667"
+          Size="291.333333333334,180"
+          Id="Package\Foreach Loop Container"
+          TopLeft="457.031243189704,405.197371012864" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="583.166650672755,239.066667176353">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="19.5312591836157,166.130703836511"
+              Start="0,0"
+              End="19.5312591836157,158.630703836511">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,79.0653519182557" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,79.0653519182557"
+                    Point2="0,83.0653519182557"
+                    Point3="4,83.0653519182557" />
+                  <mssgle:LineSegment
+                    End="15.5312591836157,83.0653519182557" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15.5312591836157,83.0653519182557"
+                    Point2="19.5312591836157,83.0653519182557"
+                    Point3="19.5312591836157,87.0653519182557" />
+                  <mssgle:LineSegment
+                    End="19.5312591836157,158.630703836511" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2495,32 +2760,82 @@ where city = 'Seattle'</property>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\Import data into new table\Data Flow Task">
+    design-time-name="Package\Foreach Loop Container\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="154.666666666667,42.6666666666667"
+          Id="Package\Foreach Loop Container\Data Flow Task\Flat File Source"
+          TopLeft="279,46" />
         <NodeLayout
           Size="174.666666666667,42.6666666666667"
-          Id="Package\Import data into new table\Data Flow Task\OLE DB Destination"
-          TopLeft="256,261" />
+          Id="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination"
+          TopLeft="361,254" />
         <NodeLayout
-          Size="151.333333333334,41.3333333333334"
-          Id="Package\Import data into new table\Data Flow Task\Flat File Source"
-          TopLeft="270,104" />
+          Size="158.666666666667,42.6666666666667"
+          Id="Package\Foreach Loop Container\Data Flow Task\Data Conversion"
+          TopLeft="233,139.666666666667" />
         <EdgeLayout
-          Id="Package\Import data into new table\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="344.5,145.333333333333">
+          Id="Package\Foreach Loop Container\Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="356.333333333333,88.6666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,115.666666666667"
+              EndConnector="-45,51"
               Start="0,0"
-              End="0,108.166666666667">
+              End="-45,43.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,108.166666666667" />
+                    End="0,21.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.5"
+                    Point2="0,25.5"
+                    Point3="-4,25.5" />
+                  <mssgle:LineSegment
+                    End="-41,25.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-41,25.5"
+                    Point2="-45,25.5"
+                    Point3="-45,29.5" />
+                  <mssgle:LineSegment
+                    End="-45,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="312.333333333333,182.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="136,71.6666666666667"
+              Start="0,0"
+              End="136,64.1666666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.8333333333334" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.8333333333334"
+                    Point2="0,35.8333333333334"
+                    Point3="4,35.8333333333334" />
+                  <mssgle:LineSegment
+                    End="132,35.8333333333334" />
+                  <mssgle:CubicBezierSegment
+                    Point1="132,35.8333333333334"
+                    Point2="136,35.8333333333334"
+                    Point3="136,39.8333333333334" />
+                  <mssgle:LineSegment
+                    End="136,64.1666666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2533,7 +2848,7 @@ where city = 'Seattle'</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Import data into new table\Data Flow Task\OLE DB Destination">
+    design-time-name="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
