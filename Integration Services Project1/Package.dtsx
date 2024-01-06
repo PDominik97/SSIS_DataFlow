@@ -9,10 +9,11 @@
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5035.3"
   DTS:LocaleID="1045"
+  DTS:MaxErrorCount="3"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="181"
-  DTS:VersionGUID="{12B8B4FD-3631-4EEB-88E6-61AA807230FB}">
+  DTS:VersionBuild="191"
+  DTS:VersionGUID="{8ED80E72-5A7A-4400-B9D8-8951FCA55023}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -67,7 +68,7 @@
       DTS:DTSID="{44C31605-8EE7-49B5-8F97-EC82EE822692}"
       DTS:ObjectName="Flat File Connection Manager Kenmore">
       <DTS:PropertyExpression
-        DTS:Name="ConnectionString">@[$Package::WorkingDirectory_path]+ @[$Package::Input_Kenmore]</DTS:PropertyExpression>
+        DTS:Name="ConnectionString">@[$Package::WorkingDirectory_path]+"\\Input_Kenmore.txt"</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -152,7 +153,7 @@
       DTS:DTSID="{DECDAEE2-C564-49E2-9D23-62ABA98C906F}"
       DTS:ObjectName="Flat File Connection Manager Renton">
       <DTS:PropertyExpression
-        DTS:Name="ConnectionString">@[$Package::WorkingDirectory_path]+ @[$Package::Input_Renton]</DTS:PropertyExpression>
+        DTS:Name="ConnectionString">@[$Package::WorkingDirectory_path]+"\\Input_Renton.txt"</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -234,7 +235,7 @@
       DTS:DTSID="{E9F3EAC5-10B7-4FE9-A96E-D06649CA588F}"
       DTS:ObjectName="Flat File Connection Manager Seattle">
       <DTS:PropertyExpression
-        DTS:Name="ConnectionString">@[$Package::WorkingDirectory_path]+ @[$Package::Input_Seattle]</DTS:PropertyExpression>
+        DTS:Name="ConnectionString">@[$Package::WorkingDirectory_path]+"\\Input_Seattle.txt"</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -334,7 +335,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AddressID"
-              DTS:DTSID="{9F83F3F6-A139-40D7-B38E-C04A2F106538}"
+              DTS:DTSID="{C1755CA3-72D5-4DD3-92CF-B8FA771AD3C6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -343,7 +344,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AddressLine1"
-              DTS:DTSID="{4C07B1B8-8F2C-40EC-9F16-EF18ACC40220}"
+              DTS:DTSID="{29DBD4FF-EE55-4DC9-90CD-0241DB0F8E6D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -352,7 +353,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AddressLine2"
-              DTS:DTSID="{1575CC4F-8DE5-46C4-B2FB-12A54B0B40EE}"
+              DTS:DTSID="{A73FAF9F-233B-4C0A-A1ED-7B2572523D30}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -361,7 +362,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="City"
-              DTS:DTSID="{BCFE3055-E926-4EDE-9E9C-BB02A2C98CC2}"
+              DTS:DTSID="{D240A603-213A-4CBB-8225-D88EF030FE97}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -370,7 +371,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="StateProvinceID"
-              DTS:DTSID="{1982E16B-5B57-437F-9C8F-0F9ED5018D33}"
+              DTS:DTSID="{DA356FA5-318F-43B6-9591-965BBC9585B0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -379,7 +380,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="PostalCode"
-              DTS:DTSID="{A5C10A39-21B1-42D3-8032-0492F7071547}"
+              DTS:DTSID="{A448D144-6344-47B1-9413-77AFD2F25D51}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -388,7 +389,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ModifiedDate"
-              DTS:DTSID="{400A4C8D-AF6F-48F5-8B16-2EE3C31AC18C}"
+              DTS:DTSID="{09F33B1D-B82C-4692-9231-3503B5F4079F}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -407,103 +408,6 @@
     </DTS:LogProvider>
   </DTS:LogProviders>
   <DTS:PackageParameters>
-    <DTS:PackageParameter
-      DTS:CreationName=""
-      DTS:DataType="8"
-      DTS:DTSID="{1D3B7083-FB8D-43B6-95C2-E91BFA0DEDD0}"
-      DTS:ObjectName="BackupInputFiles_Arguments">
-      <DTS:Property
-        DTS:DataType="8"
-        DTS:Name="ParameterValue">\backup_files</DTS:Property>
-    </DTS:PackageParameter>
-    <DTS:PackageParameter
-      DTS:CreationName=""
-      DTS:DataType="8"
-      DTS:Description="Do not change!"
-      DTS:DTSID="{7E247766-9ECC-4908-894C-D39B94EF172B}"
-      DTS:ObjectName="copy_file_script_path">
-      <DTS:Property
-        DTS:DataType="8"
-        DTS:Name="ParameterValue">\Copy_file.py</DTS:Property>
-    </DTS:PackageParameter>
-    <DTS:PackageParameter
-      DTS:CreationName=""
-      DTS:DataType="8"
-      DTS:DTSID="{F650CDB9-FEA3-4F0C-A7DC-43DBC905AB66}"
-      DTS:ObjectName="csv_directory">
-      <DTS:Property
-        DTS:DataType="8"
-        DTS:Name="ParameterValue">\csv_files</DTS:Property>
-    </DTS:PackageParameter>
-    <DTS:PackageParameter
-      DTS:CreationName=""
-      DTS:DataType="8"
-      DTS:Description="Do not change! WorkingDirectory_path + Input_Kenmore parameter"
-      DTS:DTSID="{E69BD53D-B3A6-4AD4-BEE0-AFA09AB90DF8}"
-      DTS:ObjectName="FlatFileConnectionManagerKenmore_ConnectionString">
-      <DTS:Property
-        DTS:DataType="8"
-        DTS:Name="ParameterValue">C:\SSIS\Integration_Services_Project1\Input_Kenmore.txt</DTS:Property>
-    </DTS:PackageParameter>
-    <DTS:PackageParameter
-      DTS:CreationName=""
-      DTS:DataType="8"
-      DTS:Description="Do not change! WorkingDirectory_path + Input_Renton parameter"
-      DTS:DTSID="{DBCD4CC2-F2C7-4330-94C8-BEFA1D3825D3}"
-      DTS:ObjectName="FlatFileConnectionManagerRenton_ConnectionString">
-      <DTS:Property
-        DTS:DataType="8"
-        DTS:Name="ParameterValue">C:\SSIS\Integration_Services_Project1\Input_Renton.txt</DTS:Property>
-    </DTS:PackageParameter>
-    <DTS:PackageParameter
-      DTS:CreationName=""
-      DTS:DataType="8"
-      DTS:Description="Do not change! WorkingDirectory_path + Input_Seattle parameter"
-      DTS:DTSID="{75A903FC-A16E-4160-B5C1-662D3EE32906}"
-      DTS:ObjectName="FlatFileConnectionManagerSeattle_ConnectionString">
-      <DTS:Property
-        DTS:DataType="8"
-        DTS:Name="ParameterValue">C:\SSIS\Integration_Services_Project1\Input_Seattle.txt</DTS:Property>
-    </DTS:PackageParameter>
-    <DTS:PackageParameter
-      DTS:CreationName=""
-      DTS:DataType="8"
-      DTS:DTSID="{EC90BCD3-4269-4563-AC63-3723B5139D66}"
-      DTS:ObjectName="ForEachContainer2">
-      <DTS:Property
-        DTS:DataType="8"
-        DTS:Name="ParameterValue">\Input*.txt</DTS:Property>
-    </DTS:PackageParameter>
-    <DTS:PackageParameter
-      DTS:CreationName=""
-      DTS:DataType="8"
-      DTS:Description="Do not change!"
-      DTS:DTSID="{AA8721B5-39F2-4C3E-9745-5B5371D35CEC}"
-      DTS:ObjectName="Input_Kenmore">
-      <DTS:Property
-        DTS:DataType="8"
-        DTS:Name="ParameterValue">\Input_Kenmore.txt</DTS:Property>
-    </DTS:PackageParameter>
-    <DTS:PackageParameter
-      DTS:CreationName=""
-      DTS:DataType="8"
-      DTS:Description="Do not change!"
-      DTS:DTSID="{0D64F443-0CF7-4232-A34D-342A439AC42F}"
-      DTS:ObjectName="Input_Renton">
-      <DTS:Property
-        DTS:DataType="8"
-        DTS:Name="ParameterValue">\Input_Renton.txt</DTS:Property>
-    </DTS:PackageParameter>
-    <DTS:PackageParameter
-      DTS:CreationName=""
-      DTS:DataType="8"
-      DTS:Description="Do not change!"
-      DTS:DTSID="{FA930613-2846-4D2D-A5D9-C67B7F1C081E}"
-      DTS:ObjectName="Input_Seattle">
-      <DTS:Property
-        DTS:DataType="8"
-        DTS:Name="ParameterValue">\Input_Seattle.txt</DTS:Property>
-    </DTS:PackageParameter>
     <DTS:PackageParameter
       DTS:CreationName=""
       DTS:DataType="8"
@@ -554,7 +458,7 @@
       DTS:CreationName=""
       DTS:DTSID="{2FF10BB7-0A21-4C68-A8BE-170BC98BBF0C}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="@[$Package::WorkingDirectory_path]+ @[$Package::csv_directory]"
+      DTS:Expression="@[$Package::WorkingDirectory_path]+&quot;\\csv_files&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="csv_directory_path">
@@ -580,7 +484,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="File_name_csv">
       <DTS:VariableValue
-        DTS:DataType="8">C:\SSIS\SSIS_DataFlow\csv_files\export_29112023.xls</DTS:VariableValue>
+        DTS:DataType="8">C:\SSIS\SSIS_DataFlow\csv_files\export_612024.xls</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -592,10 +496,10 @@
       DTS:ExecutableType="Microsoft.ExecuteProcess"
       DTS:LocaleID="-1"
       DTS:ObjectName="backup input files"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:PropertyExpression
-        DTS:Name="Arguments">@[$Package::WorkingDirectory_path]+ @[$Package::copy_file_script_path]</DTS:PropertyExpression>
+        DTS:Name="Arguments">@[$Package::WorkingDirectory_path]+"\\Copy_file.py"</DTS:PropertyExpression>
       <DTS:PropertyExpression
         DTS:Name="Executable">@[$Package::python_path]</DTS:PropertyExpression>
       <DTS:PropertyExpression
@@ -615,7 +519,7 @@
       DTS:ExecutableType="Microsoft.FileSystemTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="copy exported file"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <FileSystemData
@@ -633,7 +537,7 @@
       DTS:ExecutableType="Microsoft.FileSystemTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Create CSV directory"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <FileSystemData
@@ -651,7 +555,7 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="create excel worksheet"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -667,7 +571,7 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="drop excel worksheet"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -2944,8 +2848,8 @@ where city = 'Seattle'</property>
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{F2CB9937-BBFD-4890-A759-D0A1A938E8B8}"
-          DTS:ObjectName="{F2CB9937-BBFD-4890-A759-D0A1A938E8B8}"
+          DTS:DTSID="{BE6F7DC0-B10F-4413-84A0-488D0DA60051}"
+          DTS:ObjectName="{BE6F7DC0-B10F-4413-84A0-488D0DA60051}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::File_name" />
       </DTS:ForEachVariableMappings>
@@ -2958,7 +2862,7 @@ where city = 'Seattle'</property>
       DTS:ExecutableType="Microsoft.FileSystemTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="renamed copied csv file"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <FileSystemData
@@ -3070,9 +2974,21 @@ where city = 'Seattle'</property>
           Id="Package\backup input files"
           TopLeft="794.814783231713,296.711698245883" />
         <NodeLayout
+          Size="162.666666666667,42.6666666666667"
+          Id="Package\copy exported file"
+          TopLeft="874.107129831931,693.533837530139" />
+        <NodeLayout
           Size="180,42.6666666666667"
           Id="Package\Create CSV directory"
           TopLeft="898.549093753432,437.615921863279" />
+        <NodeLayout
+          Size="188,42.6666666666667"
+          Id="Package\create excel worksheet"
+          TopLeft="1038.3928416696,522.155390752524" />
+        <NodeLayout
+          Size="180,42.6666666666667"
+          Id="Package\drop excel worksheet"
+          TopLeft="926.785700475531,811.203012946193" />
         <NodeLayout
           Size="141.333333333334,41.3333333333334"
           Id="Package\Execute Time"
@@ -3112,39 +3028,39 @@ where city = 'Seattle'</property>
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="298,136"
-          Size="298,179.333333333334"
+          Size="298,178.666666666667"
           Id="Package\import data into &quot;My_PersonAdress&quot; table"
-          TopLeft="488.950885571207,406.052634186857" />
+          TopLeft="488.169635582849,405.197371012864" />
         <NodeLayout
           Size="192,42.6666666666667"
           Id="Package\renamed copied csv file"
           TopLeft="1099.66516218514,718.502514080194" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="498.05157132098,239.066667176353">
+          TopLeft="455.940460209869,239.066667176353">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-150.082824568967,74.6175478896573"
+              EndConnector="-107.971713457856,74.6175478896573"
               Start="0,0"
-              End="-150.082824568967,67.1175478896573">
+              End="-107.971713457856,67.1175478896573">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.9861300685521" />
+                    End="0,21.1295962315728" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,25.9861300685521"
-                    Point2="0,29.9861300685521"
-                    Point3="-4,29.9861300685521" />
+                    Point1="0,21.1295962315728"
+                    Point2="0,25.1295962315728"
+                    Point3="-4,25.1295962315728" />
                   <mssgle:LineSegment
-                    End="-146.082824568967,29.9861300685521" />
+                    End="-103.971713457856,25.1295962315728" />
                   <mssgle:CubicBezierSegment
-                    Point1="-146.082824568967,29.9861300685521"
-                    Point2="-150.082824568967,29.9861300685521"
-                    Point3="-150.082824568967,33.9861300685521" />
+                    Point1="-103.971713457856,25.1295962315728"
+                    Point2="-107.971713457856,25.1295962315728"
+                    Point3="-107.971713457856,29.1295962315728" />
                   <mssgle:LineSegment
-                    End="-150.082824568967,67.1175478896573" />
+                    End="-107.971713457856,67.1175478896573" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3155,30 +3071,30 @@ where city = 'Seattle'</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="666.496015765425,239.066667176353">
+          TopLeft="708.607126876536,239.066667176353">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="209.652100799622,57.6450310695303"
+              EndConnector="167.540989688511,57.6450310695303"
               Start="0,0"
-              End="209.652100799622,50.1450310695303">
+              End="167.540989688511,50.1450310695303">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.165481154819" />
+                    End="0,15.4136151147169" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,19.165481154819"
-                    Point2="0,23.165481154819"
-                    Point3="4,23.165481154819" />
+                    Point1="0,15.4136151147169"
+                    Point2="0,19.4136151147169"
+                    Point3="4,19.4136151147169" />
                   <mssgle:LineSegment
-                    End="205.652100799622,23.165481154819" />
+                    End="163.540989688511,19.4136151147169" />
                   <mssgle:CubicBezierSegment
-                    Point1="205.652100799622,23.165481154819"
-                    Point2="209.652100799622,23.165481154819"
-                    Point3="209.652100799622,27.165481154819" />
+                    Point1="163.540989688511,19.4136151147169"
+                    Point2="167.540989688511,19.4136151147169"
+                    Point3="167.540989688511,23.4136151147169" />
                   <mssgle:LineSegment
-                    End="209.652100799622,50.1450310695303" />
+                    End="167.540989688511,50.1450310695303" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3189,30 +3105,64 @@ where city = 'Seattle'</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="786.950885571207,495.719300853524">
+          TopLeft="786.169635582849,494.530704346197">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="111.598208182224,-36.7700456569114"
+              EndConnector="112.379458170583,-35.581449149585"
               Start="0,0"
-              End="104.098208182224,-36.7700456569114">
+              End="104.879458170583,-35.581449149585">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="51.7991040911122,0" />
+                    End="52.1897290852917,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="51.7991040911122,0"
-                    Point2="55.7991040911122,0"
-                    Point3="55.7991040911122,-4" />
+                    Point1="52.1897290852917,0"
+                    Point2="56.1897290852917,0"
+                    Point3="56.1897290852917,-4" />
                   <mssgle:LineSegment
-                    End="55.7991040911122,-32.7700456569114" />
+                    End="56.1897290852917,-31.581449149585" />
                   <mssgle:CubicBezierSegment
-                    Point1="55.7991040911122,-32.7700456569114"
-                    Point2="55.7991040911122,-36.7700456569114"
-                    Point3="59.7991040911122,-36.7700456569114" />
+                    Point1="56.1897290852917,-31.581449149585"
+                    Point2="56.1897290852917,-35.581449149585"
+                    Point3="60.1897290852917,-35.581449149585" />
                   <mssgle:LineSegment
-                    End="104.098208182224,-36.7700456569114" />
+                    End="104.879458170583,-35.581449149585" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="582.273793543203,239.066667176353">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="54.8958420396459,166.130703836511"
+              Start="0,0"
+              End="54.8958420396459,158.630703836511">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,79.0653519182557" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,79.0653519182557"
+                    Point2="0,83.0653519182557"
+                    Point3="4,83.0653519182557" />
+                  <mssgle:LineSegment
+                    End="50.8958420396459,83.0653519182557" />
+                  <mssgle:CubicBezierSegment
+                    Point1="50.8958420396459,83.0653519182557"
+                    Point2="54.8958420396459,83.0653519182557"
+                    Point3="54.8958420396459,87.0653519182557" />
+                  <mssgle:LineSegment
+                    End="54.8958420396459,158.630703836511" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3255,17 +3205,40 @@ where city = 'Seattle'</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <AnnotationLayout
-          Text="copy files and replace into folder"
-          ParentId="Package"
-          FontInfo="{assembly:Null}"
-          Size="202.666666666667,40"
-          Id="9f242028-1cf7-4b42-a553-c5821f2269aa"
-          TopLeft="879.687486891635,267.302635716187" />
-        <NodeLayout
-          Size="162.666666666667,42.6666666666667"
-          Id="Package\copy exported file"
-          TopLeft="874.107129831931,693.533837530139" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="988.549093753432,480.282588529946">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="143.843747916166,41.8728022225782"
+              Start="0,0"
+              End="143.843747916166,34.3728022225782">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.9364011112891" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.9364011112891"
+                    Point2="0,20.9364011112891"
+                    Point3="4,20.9364011112891" />
+                  <mssgle:LineSegment
+                    End="139.843747916166,20.9364011112891" />
+                  <mssgle:CubicBezierSegment
+                    Point1="139.843747916166,20.9364011112891"
+                    Point2="143.843747916166,20.9364011112891"
+                    Point3="143.843747916166,24.9364011112891" />
+                  <mssgle:LineSegment
+                    End="143.843747916166,34.3728022225782" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 6]"
           TopLeft="957.460552942418,632.174190555292">
@@ -3280,6 +3253,40 @@ where city = 'Seattle'</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,53.8596469748463" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 7]"
+          TopLeft="1195.66516218514,761.169180746861">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-178.87946170961,50.0338321993324"
+              Start="0,0"
+              End="-178.87946170961,42.5338321993324">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.0169160996662" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.0169160996662"
+                    Point2="0,25.0169160996662"
+                    Point3="-4,25.0169160996662" />
+                  <mssgle:LineSegment
+                    End="-174.87946170961,25.0169160996662" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-174.87946170961,25.0169160996662"
+                    Point2="-178.87946170961,25.0169160996662"
+                    Point3="-178.87946170961,29.0169160996662" />
+                  <mssgle:LineSegment
+                    End="-178.87946170961,42.5338321993324" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3322,82 +3329,6 @@ where city = 'Seattle'</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="180,42.6666666666667"
-          Id="Package\drop excel worksheet"
-          TopLeft="926.785700475531,811.203012946193" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 7]"
-          TopLeft="1195.66516218514,761.169180746861">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-178.87946170961,50.0338321993324"
-              Start="0,0"
-              End="-178.87946170961,42.5338321993324">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.0169160996662" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.0169160996662"
-                    Point2="0,25.0169160996662"
-                    Point3="-4,25.0169160996662" />
-                  <mssgle:LineSegment
-                    End="-174.87946170961,25.0169160996662" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-174.87946170961,25.0169160996662"
-                    Point2="-178.87946170961,25.0169160996662"
-                    Point3="-178.87946170961,29.0169160996662" />
-                  <mssgle:LineSegment
-                    End="-178.87946170961,42.5338321993324" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="188,42.6666666666667"
-          Id="Package\create excel worksheet"
-          TopLeft="1038.3928416696,522.155390752524" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="988.549093753432,480.282588529946">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="143.843747916166,41.8728022225782"
-              Start="0,0"
-              End="143.843747916166,34.3728022225782">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.9364011112891" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.9364011112891"
-                    Point2="0,20.9364011112891"
-                    Point3="4,20.9364011112891" />
-                  <mssgle:LineSegment
-                    End="139.843747916166,20.9364011112891" />
-                  <mssgle:CubicBezierSegment
-                    Point1="139.843747916166,20.9364011112891"
-                    Point2="143.843747916166,20.9364011112891"
-                    Point3="143.843747916166,24.9364011112891" />
-                  <mssgle:LineSegment
-                    End="143.843747916166,34.3728022225782" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 9]"
           TopLeft="1132.3928416696,564.822057419191">
@@ -3432,40 +3363,13 @@ where city = 'Seattle'</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="582.273793543202,239.066667176353">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="55.6770920280051,166.985967010505"
-              Start="0,0"
-              End="55.6770920280051,159.485967010505">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,79.4929835052523" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,79.4929835052523"
-                    Point2="0,83.4929835052523"
-                    Point3="4,83.4929835052523" />
-                  <mssgle:LineSegment
-                    End="51.6770920280051,83.4929835052523" />
-                  <mssgle:CubicBezierSegment
-                    Point1="51.6770920280051,83.4929835052523"
-                    Point2="55.6770920280051,83.4929835052523"
-                    Point3="55.6770920280051,87.4929835052523" />
-                  <mssgle:LineSegment
-                    End="55.6770920280051,159.485967010505" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <AnnotationLayout
+          Text="copy files and replace into folder"
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="202.666666666667,40"
+          Id="9f242028-1cf7-4b42-a553-c5821f2269aa"
+          TopLeft="879.687486891635,267.302635716187" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -3602,7 +3506,7 @@ where city = 'Seattle'</property>
     design-time-name="Package\Export data to flat file\Renton City">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="170.666666666667,85.3333333333334"
           Id="Package\Export data to flat file\Renton City\Flat File Destination"
@@ -3630,9 +3534,7 @@ where city = 'Seattle'</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

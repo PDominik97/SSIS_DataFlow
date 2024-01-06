@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-BHU8VRP</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuF8kkjqY60KP6oKiEDCD7wAAAAACAAAAAAAQZgAAAAEAACAAAADvsgiWn8cs22Wui647As5cZkRx+ShHs+alsac4/YQhIgAAAAAOgAAAAAIAACAAAACXtSzgzWsofCINM5cVajG0gSF5ZXN4C0iFbT7aYFv2FpAAAACVlw2XweLvKHZBXyse4CqusbjPXqsup+LpFrU/CBusRwPMIGN0CqgBiIoE/hdkC8GO2EzHW5DZlUWV1uI8ANSY2lrfwpc8nrNQf5S9CwIDhhljUVcAjRjdrf2klj12CVuN37SdIc1u4myVf1NfvIDqaZxmG+Aa0A/KSzOzdf94HUEsbKpimNal2cU1Oke82X9AAAAA2a8f4kxJSjxjD4MSsxg1Gk5L3h4IDh2I/D7yGAstt77g52aKTkfLpck7THQ0bWfptRYdB6y1udIG195MdOu+pg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuF8kkjqY60KP6oKiEDCD7wAAAAACAAAAAAAQZgAAAAEAACAAAAC4e0/Xts96Biz7Av41TMdrem0pAIp3OA1wywJZpEGh8AAAAAAOgAAAAAIAACAAAABSKpvnHmRsqGHOqCKPwUkPNIdIK7ZoV61dPZ6eCUxVOZAAAABKwYVg0WarWmxy+ZxbcYVW3HgF17HB/unCYqvPX0NqD0ay/u6alUBnWmIbNNaNt3jxLCrhUwyThoqeOQyEPRrUdpboczKrCFeyU9e8bjvTmxyykYlAK5a9AKgP2OHdenf1RbhLQgPf/gc9UPPnaLZ1ng/iWHOv4Ev3D/prMlsu28OqE7qH2D9hq6d6y5DWhtJAAAAANRd/Xl89ES0kVxIunbtFVn7TvOqfiWZ2yf2Gos7dIaoM5O8gHaOWRwDDYVot5dtn9n5WFuVZYPSxtvqMzxxbHg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,149 +42,16 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">176</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">190</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{EFA1A023-E37A-441C-9300-B9539070CACA}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{4C2911E5-628F-4C5B-8418-62DD04A7BBC9}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
               </SSIS:Properties>
               <SSIS:Parameters>
-                <SSIS:Parameter SSIS:Name="BackupInputFiles_Arguments">
-                  <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">{1D3B7083-FB8D-43B6-95C2-E91BFA0DEDD0}</SSIS:Property>
-                    <SSIS:Property SSIS:Name="CreationName">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">\backup_files</SSIS:Property>
-                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-                  </SSIS:Properties>
-                </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="copy_file_script_path">
-                  <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">{7E247766-9ECC-4908-894C-D39B94EF172B}</SSIS:Property>
-                    <SSIS:Property SSIS:Name="CreationName">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">Do not change!</SSIS:Property>
-                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">\Copy_file.py</SSIS:Property>
-                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-                  </SSIS:Properties>
-                </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="csv_directory">
-                  <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">{F650CDB9-FEA3-4F0C-A7DC-43DBC905AB66}</SSIS:Property>
-                    <SSIS:Property SSIS:Name="CreationName">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">\csv_files</SSIS:Property>
-                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-                  </SSIS:Properties>
-                </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="FlatFileConnectionManagerKenmore_ConnectionString">
-                  <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">{E69BD53D-B3A6-4AD4-BEE0-AFA09AB90DF8}</SSIS:Property>
-                    <SSIS:Property SSIS:Name="CreationName">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">Do not change! WorkingDirectory_path + Input_Kenmore parameter</SSIS:Property>
-                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\SSIS\Integration_Services_Project1\Input_Kenmore.txt</SSIS:Property>
-                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-                  </SSIS:Properties>
-                </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="FlatFileConnectionManagerRenton_ConnectionString">
-                  <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">{DBCD4CC2-F2C7-4330-94C8-BEFA1D3825D3}</SSIS:Property>
-                    <SSIS:Property SSIS:Name="CreationName">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">Do not change! WorkingDirectory_path + Input_Renton parameter</SSIS:Property>
-                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\SSIS\Integration_Services_Project1\Input_Renton.txt</SSIS:Property>
-                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-                  </SSIS:Properties>
-                </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="FlatFileConnectionManagerSeattle_ConnectionString">
-                  <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">{75A903FC-A16E-4160-B5C1-662D3EE32906}</SSIS:Property>
-                    <SSIS:Property SSIS:Name="CreationName">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">Do not change! WorkingDirectory_path + Input_Seattle parameter</SSIS:Property>
-                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\SSIS\Integration_Services_Project1\Input_Seattle.txt</SSIS:Property>
-                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-                  </SSIS:Properties>
-                </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="ForEachContainer2">
-                  <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">{EC90BCD3-4269-4563-AC63-3723B5139D66}</SSIS:Property>
-                    <SSIS:Property SSIS:Name="CreationName">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">\Input*.txt</SSIS:Property>
-                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-                  </SSIS:Properties>
-                </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="Input_Kenmore">
-                  <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">{AA8721B5-39F2-4C3E-9745-5B5371D35CEC}</SSIS:Property>
-                    <SSIS:Property SSIS:Name="CreationName">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">Do not change!</SSIS:Property>
-                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">\Input_Kenmore.txt</SSIS:Property>
-                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-                  </SSIS:Properties>
-                </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="Input_Renton">
-                  <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">{0D64F443-0CF7-4232-A34D-342A439AC42F}</SSIS:Property>
-                    <SSIS:Property SSIS:Name="CreationName">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">Do not change!</SSIS:Property>
-                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">\Input_Renton.txt</SSIS:Property>
-                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-                  </SSIS:Properties>
-                </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="Input_Seattle">
-                  <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">{FA930613-2846-4D2D-A5D9-C67B7F1C081E}</SSIS:Property>
-                    <SSIS:Property SSIS:Name="CreationName">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">Do not change!</SSIS:Property>
-                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">\Input_Seattle.txt</SSIS:Property>
-                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-                  </SSIS:Properties>
-                </SSIS:Parameter>
                 <SSIS:Parameter SSIS:Name="python_path">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">{7F39521E-F63F-4929-A5B2-DE8C077FCB1F}</SSIS:Property>
