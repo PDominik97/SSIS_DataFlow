@@ -484,7 +484,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="File_name_csv">
       <DTS:VariableValue
-        DTS:DataType="8">C:\SSIS\SSIS_DataFlow\csv_files\export_612024.xls</DTS:VariableValue>
+        DTS:DataType="8">C:\SSIS\SSIS_DataFlow\csv_files\export_2212024.xls</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
