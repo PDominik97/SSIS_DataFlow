@@ -12,8 +12,8 @@
   DTS:MaxErrorCount="3"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="191"
-  DTS:VersionGUID="{8ED80E72-5A7A-4400-B9D8-8951FCA55023}">
+  DTS:VersionBuild="192"
+  DTS:VersionGUID="{76F87CFC-6667-49CA-86F5-F7B74C1E5D66}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -484,7 +484,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="File_name_csv">
       <DTS:VariableValue
-        DTS:DataType="8">C:\SSIS\SSIS_DataFlow\csv_files\export_612024.xls</DTS:VariableValue>
+        DTS:DataType="8">C:\SSIS\SSIS_DataFlow\csv_files\export_2212024.xls</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -496,7 +496,7 @@
       DTS:ExecutableType="Microsoft.ExecuteProcess"
       DTS:LocaleID="-1"
       DTS:ObjectName="backup input files"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:PropertyExpression
         DTS:Name="Arguments">@[$Package::WorkingDirectory_path]+"\\Copy_file.py"</DTS:PropertyExpression>
@@ -519,7 +519,7 @@
       DTS:ExecutableType="Microsoft.FileSystemTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="copy exported file"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <FileSystemData
@@ -537,7 +537,7 @@
       DTS:ExecutableType="Microsoft.FileSystemTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Create CSV directory"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <FileSystemData
@@ -555,7 +555,7 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="create excel worksheet"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -571,7 +571,7 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="drop excel worksheet"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -2203,7 +2203,7 @@ where city = 'Seattle'</property>
       <DTS:Variables />
       <DTS:Executables>
         <DTS:Executable
-          DTS:refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task"
+          DTS:refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:DelayValidation="True"
           DTS:Description="Data Flow Task"
@@ -2211,7 +2211,7 @@ where city = 'Seattle'</property>
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
           DTS:MaxErrorCount="15"
-          DTS:ObjectName="Data Flow Task"
+          DTS:ObjectName="Data Flow Task - import from flat file"
           DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
           <DTS:ObjectData>
@@ -2219,7 +2219,7 @@ where city = 'Seattle'</property>
               version="1">
               <components>
                 <component
-                  refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Data Conversion"
+                  refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Data Conversion"
                   componentClassID="Microsoft.DataConvert"
                   contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
                   description="Data Conversion"
@@ -2227,55 +2227,55 @@ where city = 'Seattle'</property>
                   usesDispositions="true">
                   <inputs>
                     <input
-                      refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+                      refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Data Conversion.Inputs[Data Conversion Input]"
                       name="Data Conversion Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[AddressLine1]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Data Conversion.Inputs[Data Conversion Input].Columns[AddressLine1]"
                           cachedCodepage="1250"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="AddressLine1"
-                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine1]" />
+                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine1]" />
                         <inputColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[AddressLine2]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Data Conversion.Inputs[Data Conversion Input].Columns[AddressLine2]"
                           cachedCodepage="1250"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="AddressLine2"
-                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine2]" />
+                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine2]" />
                         <inputColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[City]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Data Conversion.Inputs[Data Conversion Input].Columns[City]"
                           cachedCodepage="1250"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="City"
-                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[City]" />
+                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].Columns[City]" />
                         <inputColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[PostalCode]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Data Conversion.Inputs[Data Conversion Input].Columns[PostalCode]"
                           cachedCodepage="1250"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="PostalCode"
-                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[PostalCode]" />
+                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].Columns[PostalCode]" />
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
                   </inputs>
                   <outputs>
                     <output
-                      refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]"
+                      refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Data Conversion.Outputs[Data Conversion Output]"
                       exclusionGroup="1"
                       name="Data Conversion Output"
-                      synchronousInputId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                      synchronousInputId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Data Conversion.Inputs[Data Conversion Input]">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of AddressLine1]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of AddressLine1]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           length="50"
-                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of AddressLine1]"
+                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of AddressLine1]"
                           name="Copy of AddressLine1"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -2283,7 +2283,7 @@ where city = 'Seattle'</property>
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the input column used as the source of data for the conversion."
-                              name="SourceInputColumnLineageID">#{Package\import data into "My_PersonAdress" table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine1]}</property>
+                              name="SourceInputColumnLineageID">#{Package\import data into "My_PersonAdress" table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine1]}</property>
                             <property
                               dataType="System.Boolean"
                               description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -2291,12 +2291,12 @@ where city = 'Seattle'</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of AddressLine2]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of AddressLine2]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           length="50"
-                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of AddressLine2]"
+                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of AddressLine2]"
                           name="Copy of AddressLine2"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -2304,7 +2304,7 @@ where city = 'Seattle'</property>
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the input column used as the source of data for the conversion."
-                              name="SourceInputColumnLineageID">#{Package\import data into "My_PersonAdress" table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine2]}</property>
+                              name="SourceInputColumnLineageID">#{Package\import data into "My_PersonAdress" table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine2]}</property>
                             <property
                               dataType="System.Boolean"
                               description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -2312,12 +2312,12 @@ where city = 'Seattle'</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           length="50"
-                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]"
+                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]"
                           name="Copy of City"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -2325,7 +2325,7 @@ where city = 'Seattle'</property>
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the input column used as the source of data for the conversion."
-                              name="SourceInputColumnLineageID">#{Package\import data into "My_PersonAdress" table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[City]}</property>
+                              name="SourceInputColumnLineageID">#{Package\import data into "My_PersonAdress" table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].Columns[City]}</property>
                             <property
                               dataType="System.Boolean"
                               description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -2333,12 +2333,12 @@ where city = 'Seattle'</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PostalCode]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PostalCode]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           length="50"
-                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PostalCode]"
+                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PostalCode]"
                           name="Copy of PostalCode"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -2346,7 +2346,7 @@ where city = 'Seattle'</property>
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the input column used as the source of data for the conversion."
-                              name="SourceInputColumnLineageID">#{Package\import data into "My_PersonAdress" table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[PostalCode]}</property>
+                              name="SourceInputColumnLineageID">#{Package\import data into "My_PersonAdress" table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].Columns[PostalCode]}</property>
                             <property
                               dataType="System.Boolean"
                               description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -2357,22 +2357,22 @@ where city = 'Seattle'</property>
                       <externalMetadataColumns />
                     </output>
                     <output
-                      refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]"
+                      refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Data Conversion.Outputs[Data Conversion Error Output]"
                       exclusionGroup="1"
                       isErrorOut="true"
                       name="Data Conversion Error Output"
-                      synchronousInputId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                      synchronousInputId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Data Conversion.Inputs[Data Conversion Input]">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -2381,7 +2381,7 @@ where city = 'Seattle'</property>
                   </outputs>
                 </component>
                 <component
-                  refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source"
+                  refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source"
                   componentClassID="Microsoft.FlatFileSource"
                   contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
                   description="Flat File Source"
@@ -2401,25 +2401,25 @@ where city = 'Seattle'</property>
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Connections[FlatFileConnection]"
+                      refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Connections[FlatFileConnection]"
                       connectionManagerID="Package.ConnectionManagers[ForEach Loop import data into My_PersonAdress]"
                       connectionManagerRefId="Package.ConnectionManagers[ForEach Loop import data into My_PersonAdress]"
                       name="FlatFileConnection" />
                   </connections>
                   <outputs>
                     <output
-                      refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]"
+                      refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output]"
                       name="Flat File Source Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressID]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].Columns[AddressID]"
                           codePage="1250"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressID]"
+                          externalMetadataColumnId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressID]"
                           length="50"
-                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressID]"
+                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].Columns[AddressID]"
                           name="AddressID"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -2434,14 +2434,14 @@ where city = 'Seattle'</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine1]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine1]"
                           codePage="1250"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressLine1]"
+                          externalMetadataColumnId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressLine1]"
                           length="50"
-                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine1]"
+                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine1]"
                           name="AddressLine1"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -2456,14 +2456,14 @@ where city = 'Seattle'</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine2]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine2]"
                           codePage="1250"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressLine2]"
+                          externalMetadataColumnId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressLine2]"
                           length="50"
-                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine2]"
+                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine2]"
                           name="AddressLine2"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -2478,14 +2478,14 @@ where city = 'Seattle'</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[City]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].Columns[City]"
                           codePage="1250"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[City]"
+                          externalMetadataColumnId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[City]"
                           length="50"
-                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[City]"
+                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].Columns[City]"
                           name="City"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -2500,14 +2500,14 @@ where city = 'Seattle'</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[StateProvinceID]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].Columns[StateProvinceID]"
                           codePage="1250"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StateProvinceID]"
+                          externalMetadataColumnId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StateProvinceID]"
                           length="50"
-                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[StateProvinceID]"
+                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].Columns[StateProvinceID]"
                           name="StateProvinceID"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -2522,14 +2522,14 @@ where city = 'Seattle'</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[PostalCode]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].Columns[PostalCode]"
                           codePage="1250"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PostalCode]"
+                          externalMetadataColumnId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PostalCode]"
                           length="50"
-                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[PostalCode]"
+                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].Columns[PostalCode]"
                           name="PostalCode"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -2544,14 +2544,14 @@ where city = 'Seattle'</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ModifiedDate]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].Columns[ModifiedDate]"
                           codePage="1250"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ModifiedDate]"
+                          externalMetadataColumnId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ModifiedDate]"
                           length="50"
-                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ModifiedDate]"
+                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].Columns[ModifiedDate]"
                           name="ModifiedDate"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -2569,43 +2569,43 @@ where city = 'Seattle'</property>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressID]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressID]"
                           codePage="1250"
                           dataType="str"
                           length="50"
                           name="AddressID" />
                         <externalMetadataColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressLine1]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressLine1]"
                           codePage="1250"
                           dataType="str"
                           length="50"
                           name="AddressLine1" />
                         <externalMetadataColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressLine2]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressLine2]"
                           codePage="1250"
                           dataType="str"
                           length="50"
                           name="AddressLine2" />
                         <externalMetadataColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[City]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[City]"
                           codePage="1250"
                           dataType="str"
                           length="50"
                           name="City" />
                         <externalMetadataColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StateProvinceID]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StateProvinceID]"
                           codePage="1250"
                           dataType="str"
                           length="50"
                           name="StateProvinceID" />
                         <externalMetadataColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PostalCode]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PostalCode]"
                           codePage="1250"
                           dataType="str"
                           length="50"
                           name="PostalCode" />
                         <externalMetadataColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ModifiedDate]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ModifiedDate]"
                           codePage="1250"
                           dataType="str"
                           length="50"
@@ -2613,27 +2613,27 @@ where city = 'Seattle'</property>
                       </externalMetadataColumns>
                     </output>
                     <output
-                      refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output]"
+                      refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Error Output]"
                       isErrorOut="true"
                       name="Flat File Source Error Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                           codePage="1250"
                           dataType="text"
                           description="Flat File Source Error Output Column"
-                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                           name="Flat File Source Error Output Column" />
                         <outputColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -2642,7 +2642,7 @@ where city = 'Seattle'</property>
                   </outputs>
                 </component>
                 <component
-                  refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination"
+                  refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination"
                   componentClassID="Microsoft.OLEDBDestination"
                   contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
                   description="OLE DB Destination"
@@ -2699,7 +2699,7 @@ where city = 'Seattle'</property>
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                      refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination.Connections[OleDbConnection]"
                       connectionManagerID="Package.ConnectionManagers[DESKTOP-9J527KO.AdventureWorksLT2019]"
                       connectionManagerRefId="Package.ConnectionManagers[DESKTOP-9J527KO.AdventureWorksLT2019]"
                       description="The OLE DB runtime connection used to access the database."
@@ -2707,97 +2707,97 @@ where city = 'Seattle'</property>
                   </connections>
                   <inputs>
                     <input
-                      refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination.Inputs[OLE DB Destination Input]"
                       errorOrTruncationOperation="Insert"
                       errorRowDisposition="IgnoreFailure"
                       hasSideEffects="true"
                       name="OLE DB Destination Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AddressID]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AddressID]"
                           cachedCodepage="1250"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="AddressID"
-                          externalMetadataColumnId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressID]"
-                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[AddressID]" />
+                          externalMetadataColumnId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressID]"
+                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].Columns[AddressID]" />
                         <inputColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StateProvinceID]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StateProvinceID]"
                           cachedCodepage="1250"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="StateProvinceID"
-                          externalMetadataColumnId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StateProvinceID]"
-                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[StateProvinceID]" />
+                          externalMetadataColumnId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StateProvinceID]"
+                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].Columns[StateProvinceID]" />
                         <inputColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ModifiedDate]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ModifiedDate]"
                           cachedCodepage="1250"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="ModifiedDate"
-                          externalMetadataColumnId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ModifiedDate]"
-                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ModifiedDate]" />
+                          externalMetadataColumnId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ModifiedDate]"
+                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output].Columns[ModifiedDate]" />
                         <inputColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of AddressLine1]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of AddressLine1]"
                           cachedDataType="wstr"
                           cachedLength="50"
                           cachedName="Copy of AddressLine1"
-                          externalMetadataColumnId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine1]"
-                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of AddressLine1]" />
+                          externalMetadataColumnId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine1]"
+                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of AddressLine1]" />
                         <inputColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of AddressLine2]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of AddressLine2]"
                           cachedDataType="wstr"
                           cachedLength="50"
                           cachedName="Copy of AddressLine2"
-                          externalMetadataColumnId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine2]"
-                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of AddressLine2]" />
+                          externalMetadataColumnId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine2]"
+                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of AddressLine2]" />
                         <inputColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of City]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of City]"
                           cachedDataType="wstr"
                           cachedLength="50"
                           cachedName="Copy of City"
-                          externalMetadataColumnId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[City]"
-                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]" />
+                          externalMetadataColumnId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]" />
                         <inputColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of PostalCode]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of PostalCode]"
                           cachedDataType="wstr"
                           cachedLength="50"
                           cachedName="Copy of PostalCode"
-                          externalMetadataColumnId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
-                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PostalCode]" />
+                          externalMetadataColumnId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
+                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PostalCode]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressID]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressID]"
                           dataType="i4"
                           name="AddressID" />
                         <externalMetadataColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine1]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine1]"
                           dataType="wstr"
                           length="100"
                           name="AddressLine1" />
                         <externalMetadataColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine2]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine2]"
                           dataType="wstr"
                           length="100"
                           name="AddressLine2" />
                         <externalMetadataColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[City]"
                           dataType="wstr"
                           length="100"
                           name="City" />
                         <externalMetadataColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StateProvinceID]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StateProvinceID]"
                           dataType="i4"
                           name="StateProvinceID" />
                         <externalMetadataColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
                           dataType="wstr"
                           length="100"
                           name="PostalCode" />
                         <externalMetadataColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ModifiedDate]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ModifiedDate]"
                           dataType="dbTimeStamp"
                           name="ModifiedDate" />
                       </externalMetadataColumns>
@@ -2805,22 +2805,22 @@ where city = 'Seattle'</property>
                   </inputs>
                   <outputs>
                     <output
-                      refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                      refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
                       exclusionGroup="1"
                       isErrorOut="true"
                       name="OLE DB Destination Error Output"
-                      synchronousInputId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                      synchronousInputId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination.Inputs[OLE DB Destination Input]">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          lineageId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -2831,15 +2831,15 @@ where city = 'Seattle'</property>
               </components>
               <paths>
                 <path
-                  refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task.Paths[Data Conversion Output]"
-                  endId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file.Paths[Data Conversion Output]"
+                  endId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   name="Data Conversion Output"
-                  startId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
+                  startId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Data Conversion.Outputs[Data Conversion Output]" />
                 <path
-                  refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task.Paths[Flat File Source Output]"
-                  endId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+                  refId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file.Paths[Flat File Source Output]"
+                  endId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Data Conversion.Inputs[Data Conversion Input]"
                   name="Flat File Source Output"
-                  startId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
+                  startId="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source.Outputs[Flat File Source Output]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
@@ -2862,7 +2862,7 @@ where city = 'Seattle'</property>
       DTS:ExecutableType="Microsoft.FileSystemTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="renamed copied csv file"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <FileSystemData
@@ -3021,16 +3021,16 @@ where city = 'Seattle'</property>
           Id="Package\if not exist, create table SSIS_execute"
           TopLeft="217.968746752013,313.68421506601" />
         <NodeLayout
-          Size="153.333333333334,42.6666666666667"
-          Id="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task"
-          TopLeft="69.7083216452351,32.4298284249733" />
+          Size="250.666666666667,42.6666666666667"
+          Id="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file"
+          TopLeft="41.236099847282,47.6345070737368" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="298,136"
-          Size="298,178.666666666667"
+          PanelSize="325.333333333334,145.333333333334"
+          Size="325.333333333334,188"
           Id="Package\import data into &quot;My_PersonAdress&quot; table"
-          TopLeft="488.169635582849,405.197371012864" />
+          TopLeft="465.947413691764,408.998540675055" />
         <NodeLayout
           Size="192,42.6666666666667"
           Id="Package\renamed copied csv file"
@@ -3105,30 +3105,30 @@ where city = 'Seattle'</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="786.169635582849,494.530704346197">
+          TopLeft="791.280747025097,502.998540675055">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="112.379458170583,-35.581449149585"
+              EndConnector="107.268346728335,-44.0492854784424"
               Start="0,0"
-              End="104.879458170583,-35.581449149585">
+              End="99.7683467283349,-44.0492854784424">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="52.1897290852917,0" />
+                    End="49.6341733641675,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="52.1897290852917,0"
-                    Point2="56.1897290852917,0"
-                    Point3="56.1897290852917,-4" />
+                    Point1="49.6341733641675,0"
+                    Point2="53.6341733641675,0"
+                    Point3="53.6341733641675,-4" />
                   <mssgle:LineSegment
-                    End="56.1897290852917,-31.581449149585" />
+                    End="53.6341733641675,-40.0492854784424" />
                   <mssgle:CubicBezierSegment
-                    Point1="56.1897290852917,-31.581449149585"
-                    Point2="56.1897290852917,-35.581449149585"
-                    Point3="60.1897290852917,-35.581449149585" />
+                    Point1="53.6341733641675,-40.0492854784424"
+                    Point2="53.6341733641675,-44.0492854784424"
+                    Point3="57.6341733641675,-44.0492854784424" />
                   <mssgle:LineSegment
-                    End="104.879458170583,-35.581449149585" />
+                    End="99.7683467283349,-44.0492854784424" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3143,26 +3143,26 @@ where city = 'Seattle'</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="54.8958420396459,166.130703836511"
+              EndConnector="46.3402868152277,169.931873498702"
               Start="0,0"
-              End="54.8958420396459,158.630703836511">
+              End="46.3402868152277,162.431873498702">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,79.0653519182557" />
+                    End="0,80.965936749351" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,79.0653519182557"
-                    Point2="0,83.0653519182557"
-                    Point3="4,83.0653519182557" />
+                    Point1="0,80.965936749351"
+                    Point2="0,84.965936749351"
+                    Point3="4,84.965936749351" />
                   <mssgle:LineSegment
-                    End="50.8958420396459,83.0653519182557" />
+                    End="42.3402868152277,84.965936749351" />
                   <mssgle:CubicBezierSegment
-                    Point1="50.8958420396459,83.0653519182557"
-                    Point2="54.8958420396459,83.0653519182557"
-                    Point3="54.8958420396459,87.0653519182557" />
+                    Point1="42.3402868152277,84.965936749351"
+                    Point2="46.3402868152277,84.965936749351"
+                    Point3="46.3402868152277,88.965936749351" />
                   <mssgle:LineSegment
-                    End="54.8958420396459,158.630703836511" />
+                    End="46.3402868152277,162.431873498702" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3377,7 +3377,7 @@ where city = 'Seattle'</property>
     design-time-name="Package\export data from My_PersonAdress to excel file">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="154.666666666667,42.6666666666667"
           Id="Package\export data from My_PersonAdress to excel file\OLE DB Source"
@@ -3417,7 +3417,9 @@ where city = 'Seattle'</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3506,7 +3508,7 @@ where city = 'Seattle'</property>
     design-time-name="Package\Export data to flat file\Renton City">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="170.666666666667,85.3333333333334"
           Id="Package\Export data to flat file\Renton City\Flat File Destination"
@@ -3534,7 +3536,9 @@ where city = 'Seattle'</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3607,24 +3611,24 @@ where city = 'Seattle'</property>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task">
+    design-time-name="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="174.666666666667,42.6666666666667"
-          Id="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination"
+          Id="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination"
           TopLeft="361,254" />
         <NodeLayout
           Size="154.666666666667,42.6666666666667"
-          Id="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Flat File Source"
+          Id="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Flat File Source"
           TopLeft="279,46" />
         <NodeLayout
           Size="158.666666666667,42.6666666666667"
-          Id="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\Data Conversion"
+          Id="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\Data Conversion"
           TopLeft="233,139.666666666667" />
         <EdgeLayout
-          Id="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task.Paths[Flat File Source Output]"
+          Id="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file.Paths[Flat File Source Output]"
           TopLeft="356.333333333333,88.6666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -3658,7 +3662,7 @@ where city = 'Seattle'</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task.Paths[Data Conversion Output]"
+          Id="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file.Paths[Data Conversion Output]"
           TopLeft="312.333333333333,182.333333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -3695,7 +3699,7 @@ where city = 'Seattle'</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task\OLE DB Destination">
+    design-time-name="Package\import data into &quot;My_PersonAdress&quot; table\Data Flow Task - import from flat file\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
